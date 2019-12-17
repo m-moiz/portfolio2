@@ -1,5 +1,5 @@
 html {
-	font-family: sans-serif;
+	font-family: 'Nunito', sans-serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -7,6 +7,7 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
 }
 article,
 aside,
@@ -42,14 +43,16 @@ template {
 a {
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
-	color: #333;
 	text-decoration: none;
+}
+
+a:hover {
 }
 a:active,
 a:hover {
-	color: rgb(65, 250, 225);
 	outline-width: 0;
 }
+
 abbr[title] {
 	border-bottom: none;
 	text-decoration: underline;
@@ -188,7 +191,7 @@ textarea {
 	font: inherit;
 }
 html {
-	font: 112.5%/1.45em georgia, serif;
+	font-size: 16px;
 	box-sizing: border-box;
 	overflow-y: scroll;
 }
@@ -202,8 +205,6 @@ html {
 	box-sizing: inherit;
 }
 body {
-	color: hsla(0, 0%, 0%, 0.8);
-	font-family: georgia, serif;
 	font-weight: normal;
 	word-wrap: break-word;
 	font-kerning: normal;
@@ -232,12 +233,9 @@ h1 {
 	padding-right: 0;
 	padding-top: 0;
 	margin-bottom: 1.45rem;
-	color: inherit;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
 	font-weight: bold;
 	text-rendering: optimizeLegibility;
-	font-size: 2.25rem;
+	font-size: 3.25rem;
 	line-height: 1.1;
 }
 h2 {
@@ -250,8 +248,6 @@ h2 {
 	padding-top: 0;
 	margin-bottom: 1.45rem;
 	color: inherit;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
 	font-weight: bold;
 	text-rendering: optimizeLegibility;
 	font-size: 1.62671rem;
@@ -266,12 +262,9 @@ h3 {
 	padding-right: 0;
 	padding-top: 0;
 	margin-bottom: 1.45rem;
-	color: inherit;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
 	font-weight: bold;
 	text-rendering: optimizeLegibility;
-	font-size: 1.38316rem;
+	font-size: 1.48316rem;
 	line-height: 1.1;
 }
 h4 {
@@ -284,8 +277,6 @@ h4 {
 	padding-top: 0;
 	margin-bottom: 1.45rem;
 	color: inherit;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
 	font-weight: bold;
 	text-rendering: optimizeLegibility;
 	font-size: 1rem;
@@ -301,8 +292,6 @@ h5 {
 	padding-top: 0;
 	margin-bottom: 1.45rem;
 	color: inherit;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
 	font-weight: bold;
 	text-rendering: optimizeLegibility;
 	font-size: 0.85028rem;
@@ -318,8 +307,6 @@ h6 {
 	padding-top: 0;
 	margin-bottom: 1.45rem;
 	color: inherit;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
 	font-weight: bold;
 	text-rendering: optimizeLegibility;
 	font-size: 0.78405rem;
