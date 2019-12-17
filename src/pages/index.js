@@ -16,10 +16,28 @@ import ListItem from '../components/list-item/list-item';
 import SEO from '../components/seo';
 
 const StyledLists = styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	margin-top: 4rem;
+	margin-bottom: 4rem;
+
+	@media only screen and (max-width: 517px) {
+		div:nth-child(1) {
+			margin-bottom: 1rem;
+		}
+
+		div:nth-child(2) {
+			justify-self: center;
+		}
+	}
+`;
+
+const StyledSkills = styled.div`
+	display: flex;
+	width: 100vw;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	justify-content: center;
 `;
 
 const IndexPage = () => {
@@ -36,7 +54,7 @@ const IndexPage = () => {
 					</video>
 
 					<StyledLists>
-						<ListContainer listTitle="Features: ">
+						<ListContainer containerStyle={{ justifySelf: 'center' }} listTitle="Features: ">
 							<ListItem>
 								<ListIcon color="green">
 									<FaCheck />
@@ -63,27 +81,27 @@ const IndexPage = () => {
 							</ListItem>
 						</ListContainer>
 
-						<ListContainer listTitle="Built Using: ">
+						<ListContainer gridStyle="auto" style="grid" listTitle="Built Using: ">
 							<ListItem>
-								<ListIcon>
+								<ListIcon color="blue">
 									<FaReact />
 								</ListIcon>
 								<p>React</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon>
+								<ListIcon color="red">
 									<DiRedis />
 								</ListIcon>
 								<p>Redis</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon>
+								<ListIcon color="pink">
 									<FaSass />
 								</ListIcon>
 								<p>Sass</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon>
+								<ListIcon color="green">
 									<DiMongodb />
 								</ListIcon>
 								<p>MongoDB</p>
@@ -94,12 +112,58 @@ const IndexPage = () => {
 								</ListIcon>
 								<p>Nginx</p>
 							</ListItem>
+							<ListItem>
+								<ListIcon>
+									<DiNginx />
+								</ListIcon>
+								<p>Redux</p>
+							</ListItem>
 						</ListContainer>
 					</StyledLists>
 				</Project>
 			</Section>
 			<Section>
 				<SectionTitle color="rgba(255, 99, 234, 0.65)">My Skills</SectionTitle>
+				<StyledSkills>
+					<ListContainer style="grid" listTitle="Technologies: ">
+						<ListItem>
+							<ListIcon color="blue">
+								<FaReact />
+							</ListIcon>
+							<p>React</p>
+						</ListItem>
+						<ListItem>
+							<ListIcon color="red">
+								<DiRedis />
+							</ListIcon>
+							<p>Redis</p>
+						</ListItem>
+						<ListItem>
+							<ListIcon color="pink">
+								<FaSass />
+							</ListIcon>
+							<p>Sass</p>
+						</ListItem>
+						<ListItem>
+							<ListIcon color="green">
+								<DiMongodb />
+							</ListIcon>
+							<p>MongoDB</p>
+						</ListItem>
+						<ListItem>
+							<ListIcon>
+								<DiNginx />
+							</ListIcon>
+							<p>Nginx</p>
+						</ListItem>
+						<ListItem>
+							<ListIcon>
+								<DiNginx />
+							</ListIcon>
+							<p>Redux</p>
+						</ListItem>
+					</ListContainer>
+				</StyledSkills>
 			</Section>
 			<Section>
 				<SectionTitle color="rgba(51, 126, 255, 0.82)">Contact</SectionTitle>
