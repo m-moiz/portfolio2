@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { FaCheck, FaReact, FaSass } from 'react-icons/fa';
+import { DiRedis, DiNginx, DiMongodb } from 'react-icons/di';
+
 import StyledHeroBackground from '../components/hero-background/hero-background';
 import Layout from '../components/layout/layout';
 import Section from '../components/section/section';
@@ -10,7 +13,6 @@ import ProjectTitle from '../components/project-title/project-title';
 import ListContainer from '../components/list-container/list-container';
 import ListIcon from '../components/list-icon/list-icon';
 import ListItem from '../components/list-item/list-item';
-
 import SEO from '../components/seo';
 
 const StyledLists = styled.div`
@@ -21,7 +23,6 @@ const StyledLists = styled.div`
 `;
 
 const IndexPage = () => {
-	const iconClass = 'fas fa-check';
 	return (
 		<Layout>
 			<SEO title="Home" />
@@ -37,31 +38,61 @@ const IndexPage = () => {
 					<StyledLists>
 						<ListContainer listTitle="Features: ">
 							<ListItem>
-								<ListIcon icon={iconClass} color="green" />
+								<ListIcon color="green">
+									<FaCheck />
+								</ListIcon>
 								<p>Track Issues</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon icon={iconClass} color="green" />
+								<ListIcon color="green">
+									<FaCheck />
+								</ListIcon>
 								<p>Plan Projects</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon icon={iconClass} color="green" />
+								<ListIcon color="green">
+									<FaCheck />
+								</ListIcon>
 								<p>Organize Teams</p>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="green">
+									<FaCheck />
+								</ListIcon>
+								<p>Responsive</p>
 							</ListItem>
 						</ListContainer>
 
 						<ListContainer listTitle="Built Using: ">
 							<ListItem>
-								<ListIcon icon="fab fa-react" />
+								<ListIcon>
+									<FaReact />
+								</ListIcon>
 								<p>React</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon icon="fab fa-sass" />
+								<ListIcon>
+									<DiRedis />
+								</ListIcon>
+								<p>Redis</p>
+							</ListItem>
+							<ListItem>
+								<ListIcon>
+									<FaSass />
+								</ListIcon>
 								<p>Sass</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon icon={iconClass} />
+								<ListIcon>
+									<DiMongodb />
+								</ListIcon>
 								<p>MongoDB</p>
+							</ListItem>
+							<ListItem>
+								<ListIcon>
+									<DiNginx />
+								</ListIcon>
+								<p>Nginx</p>
 							</ListItem>
 						</ListContainer>
 					</StyledLists>

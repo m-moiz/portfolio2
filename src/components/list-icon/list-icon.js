@@ -8,10 +8,6 @@ const Wrapper = styled.div`
 	}
 `;
 
-const ListIcon = ({ icon, color }) => (
-	<Wrapper color={color}>
-		<i className={icon} />
-	</Wrapper>
-);
+const ListIcon = ({ children }) => <Wrapper color={color}>{children}</Wrapper>;
 
 export default ListIcon;
