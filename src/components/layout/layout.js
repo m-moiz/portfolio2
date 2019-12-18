@@ -7,7 +7,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Scrollbars } from 'react-custom-scrollbars';
 import styled from 'styled-components';
 
 import Menu from '../menu/menu';
@@ -22,13 +22,15 @@ const Body = styled.div`
 
 const Layout = ({ children }) => {
 	return (
-		<Body>
-			<Menu />
-			<div>
-				<main>{children}</main>
-				<footer />
-			</div>
-		</Body>
+		<Scrollbars style={{ width: '100vw', height: '100vh' }}>
+			<Body>
+				<Menu />
+				<div>
+					<main>{children}</main>
+					<footer />
+				</div>
+			</Body>
+		</Scrollbars>
 	);
 };
 

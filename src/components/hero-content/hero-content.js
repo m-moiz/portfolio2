@@ -44,10 +44,27 @@ const slideFromBottom = keyframes`
 const Wrapper = styled.div`
 	position: relative;
 
-	@media only screen and (max-width: 500px) {
+	@media only screen and (max-width: 411px) {
+		right: 10.2rem;
+		width: 90vw;
+		padding-left: 1.7rem;
+		padding-top: 3.7rem;
+		height: 20rem;
+	}
+
+	@media only screen and (max-width: 450px) and (min-width: 412px) {
+		right: 10.2rem;
+		width: 153%;
+		padding-left: 1.7rem;
+		padding-top: 3.7rem;
+		height: 20rem;
+	}
+
+	@media only screen and (max-width: 500px) and (min-width: 451px) {
 		right: 9rem;
 		width: 130%;
 		padding-left: 1.7rem;
+		padding-top: 3.7rem;
 		height: 20rem;
 	}
 
@@ -55,6 +72,7 @@ const Wrapper = styled.div`
 		right: 7rem;
 		width: 110%;
 		padding-left: 1.7rem;
+		padding-top: 3.7rem;
 		height: 20rem;
 	}
 
@@ -96,8 +114,12 @@ const MainHeader = styled.h1`
 		font-size: 2.2rem !important;
 	}
 
-	@media only screen and (max-width: 840px) {
+	@media only screen and (max-width: 840px) and (min-width: 500px) {
 		font-size: 2.1rem !important;
+	}
+
+	@media only screen and (max-width: 499px) {
+		font-size: 1.9rem !important;
 	}
 `;
 
@@ -105,7 +127,11 @@ const Description = styled.h3`
 	animation: ${slideFromRight} .4s ease-in-out 1;
 	opacity: 1;
 
-	@media only screen and (max-width: 840px) {
+	@media only screen and (max-width: 499px) {
+		font-size: .9rem !important;
+	}
+
+	@media only screen and (max-width: 840px) and (min-width: 500px) {
 		font-size: 1.1rem !important;
 	}
 

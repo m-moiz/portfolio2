@@ -14,13 +14,14 @@ import ListContainer from '../components/list-container/list-container';
 import ListIcon from '../components/list-icon/list-icon';
 import ListItem from '../components/list-item/list-item';
 import Button from '../components/button/button.component';
+import ContactForm from '../components/contact-form/contact-form';
 import SEO from '../components/seo';
 
 const StyledLists = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	margin-top: 4rem;
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 
 	@media only screen and (max-width: 517px) {
 		div:nth-child(1) {
@@ -173,6 +174,7 @@ const IndexPage = () => {
 			</Section>
 			<Section>
 				<SectionTitle color="rgba(51, 126, 255, 0.82)">Contact</SectionTitle>
+				<ContactForm />
 			</Section>
 		</Layout>
 	);
