@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { FaCheck, FaReact, FaSass } from 'react-icons/fa';
-import { DiRedis, DiNginx, DiMongodb, DiNodejs, DiJava, DiDocker } from 'react-icons/di';
+import { DiRedis, DiNginx, DiMongodb, DiNodejs, DiJava, DiDocker, DiGit } from 'react-icons/di';
 import { Icon, InlineIcon } from '@iconify/react';
 import reduxIcon from '@iconify/icons-logos/redux';
 
@@ -188,6 +188,12 @@ const IndexPage = () => {
 								<DiNodejs />
 							</ListIcon>
 							<StyledP>NodeJS</StyledP>
+						</ListItem>
+						<ListItem>
+							<ListIcon color="black">
+								<DiGit />
+							</ListIcon>
+							<StyledP>Git</StyledP>
 						</ListItem>
 						<ListItem>
 							<ListIcon color="brown">
