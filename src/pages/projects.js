@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../components/layout/layout';
-
 import Section from '../components/section/section';
 import SectionTitle from '../components/section-title/section-title';
 import ProjectTitle from '../components/project-title/project-title';
@@ -14,6 +13,8 @@ import { FaCheck, FaReact, FaSass } from 'react-icons/fa';
 import { DiRedis, DiNginx, DiMongodb, DiNodejs, DiJava, DiDocker } from 'react-icons/di';
 import { Icon, InlineIcon } from '@iconify/react';
 import reduxIcon from '@iconify/icons-logos/redux';
+
+import styled from 'styled-components';
 
 const StyledLists = styled.div`
 	display: grid;
