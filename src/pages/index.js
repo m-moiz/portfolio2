@@ -13,6 +13,7 @@ import ProjectTitle from '../components/project-title/project-title';
 import ListContainer from '../components/list-container/list-container';
 import ListIcon from '../components/list-icon/list-icon';
 import ListItem from '../components/list-item/list-item';
+import Button from '../components/button/button.component';
 import SEO from '../components/seo';
 
 const StyledLists = styled.div`
@@ -124,6 +125,7 @@ const IndexPage = () => {
 							</ListItem>
 						</ListContainer>
 					</StyledLists>
+					<Button>Go To Axon</Button>
 				</Project>
 			</Section>
 			<Section>
