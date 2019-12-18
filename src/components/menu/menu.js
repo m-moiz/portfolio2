@@ -9,21 +9,25 @@ const Wrapper = styled.div`
 `;
 
 const MenuHeader = styled.div`
-	margin-left: 6.8rem;
 	font-family: 'Nunito', sans-serif;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	webkit-justify-content: none !important;
 	padding: 2rem;
 	height: 4rem;
 	margin-bottom: 1rem;
-	width: 400px;
+
+	@media only screen and (min-width: 800px) {
+		margin-left: 6rem;
+	}
 `;
 
 const HeaderLink = styled.li`
 	position: relative;
-	padding-left: 3rem;
-	padding-right: 3rem;
+	padding-right: 2rem;
+	@media only screen and (min-width: 800px) {
+		padding-right: 4rem;
+	}
 	list-style-type: none;
 	&:before {
 		content: "";
@@ -31,7 +35,6 @@ const HeaderLink = styled.li`
 		width: 100%;
 		height: 2px;
 		top: 2rem;
-		left: 2rem;
 		background-color: rgba(255, 255, 255, 1);
 		visibility: hidden;
 		-webkit-transform: scaleX(0);

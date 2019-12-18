@@ -23,11 +23,15 @@ const StyledLists = styled.div`
 
 	@media only screen and (max-width: 517px) {
 		div:nth-child(1) {
-			margin-bottom: 1rem;
+			div {
+				margin-bottom: 1rem;
+			}
 		}
 
 		div:nth-child(2) {
-			justify-self: center;
+			div {
+				justify-self: center;
+			}
 		}
 	}
 `;
@@ -125,7 +129,7 @@ const IndexPage = () => {
 			<Section>
 				<SectionTitle color="rgba(255, 99, 234, 0.65)">My Skills</SectionTitle>
 				<StyledSkills>
-					<ListContainer style="grid" listTitle="Technologies: ">
+					<ListContainer center style="grid" listTitle="Technologies: ">
 						<ListItem>
 							<ListIcon color="blue">
 								<FaReact />

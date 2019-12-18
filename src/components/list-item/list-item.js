@@ -5,7 +5,7 @@ const StyledLi = styled.li`
 	list-style-type: none;
 	display: flex;
 	flex-direction: row;
-	font-size: 1.4rem;
+	font-size: inherit;
 `;
 
 const ListItem = ({ children }) => <StyledLi>{children}</StyledLi>;
