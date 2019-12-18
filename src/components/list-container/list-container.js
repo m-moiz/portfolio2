@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const Container = styled.div`@media only screen and (min-width: 900px) {font-size: 1.5rem;}`;
 const ListTitle = styled.h3`
@@ -19,7 +20,9 @@ const StyledUl = styled.ul`
 const ListContainer = ({ containerStyle, gridStyle, children, style, listTitle, center }) => (
 	<Container>
 		<div style={containerStyle}>
-			<ListTitle center={center}>{listTitle}</ListTitle>
+			<ListTitle center={center}>
+				<Fade>{listTitle}</Fade>
+			</ListTitle>
 			{style === 'grid' ? <StyledUl gridStyle={gridStyle}>{children}</StyledUl> : <ul>{children}</ul>}
 		</div>
 	</Container>

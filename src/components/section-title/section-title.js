@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -24,7 +25,9 @@ const Wrapper = styled.div`
 
 const SectionTitle = ({ children, color }) => (
 	<Wrapper color={color}>
-		<h2>{children}</h2>
+		<Fade>
+			<h2>{children}</h2>
+		</Fade>
 	</Wrapper>
 );
 

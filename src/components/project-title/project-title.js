@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -28,8 +29,10 @@ const Wrapper = styled.div`
 
 const ProjectTitle = ({ title, desc }) => (
 	<Wrapper>
-		<h3>{title}</h3>
-		<h4>{desc}</h4>
+		<Fade>
+			<h3>{title}</h3>
+			<h4>{desc}</h4>
+		</Fade>
 	</Wrapper>
 );
 
