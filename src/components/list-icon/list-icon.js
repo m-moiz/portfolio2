@@ -5,14 +5,15 @@ import Reveal from 'react-reveal/Reveal';
 
 const Wrapper = styled.div`
 	margin-right: .5rem;
+	font-size: ${(props) => (props.small ? 'inherit' : '2.4rem')};
 	i {
 		color: ${(props) => (props.color ? props.color : 'black')};
 	}
 `;
 
-const ListIcon = ({ children, color }) => (
+const ListIcon = ({ children, color, small }) => (
 	<IconContext.Provider value={{ color: color }}>
-		<Wrapper>
+		<Wrapper small={small}>
 			<Reveal>{children}</Reveal>
 		</Wrapper>
 	</IconContext.Provider>

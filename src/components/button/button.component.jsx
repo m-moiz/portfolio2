@@ -6,14 +6,14 @@ const Wrapper = styled.div`
 	justify-content: center;
 
 	button {
-		border-radius: 6rem;
+		border-radius: 5rem;
 		background-color: #00a4d6;
 		color: white;
-		font-size: 1.5rem;
+		font-size: ${(props) => (props.size === 'small' ? '1.2rem' : '1.5rem')};
 		border: none !important;
 		padding: 1rem;
-		padding-left: 3rem;
-		padding-right: 3rem;
+		padding-left: ${(props) => (props.size === 'small' ? '2.5rem' : '3rem')};
+		padding-right: ${(props) => (props.size === 'small' ? '2.5rem' : '3rem')};
 		box-shadow: 1px 1px 4px 1px #c7c7c7;
 		transition: color .2s ease-in;
 		transition: background-color .2s ease-in;
@@ -34,15 +34,15 @@ const Wrapper = styled.div`
 
 	@media only screen and (max-width: 900px) {
 		button {
-			font-size: 1.2rem;
+			font-size: ${(props) => (props.size === 'small' ? '.9rem' : '1.2rem')};
 		}
 	}
 
 	margin-bottom: 2rem;
 `;
 
-const Button = ({ handleClick, children }) => (
-	<Wrapper>
+const Button = ({ handleClick, children, size }) => (
+	<Wrapper size={size}>
 		<button onClick={handleClick}>{children}</button>
 	</Wrapper>
 );

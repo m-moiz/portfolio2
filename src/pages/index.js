@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { FaCheck, FaReact, FaSass } from 'react-icons/fa';
-import { DiRedis, DiNginx, DiMongodb } from 'react-icons/di';
+import { DiRedis, DiNginx, DiMongodb, DiNodejs, DiJava, DiDocker } from 'react-icons/di';
+import { Icon, InlineIcon } from '@iconify/react';
+import reduxIcon from '@iconify/icons-logos/redux';
 
 import StyledHeroBackground from '../components/hero-background/hero-background';
 import Layout from '../components/layout/layout';
@@ -38,6 +40,8 @@ const StyledLists = styled.div`
 	}
 `;
 
+const StyledP = styled.p`@media only screen and (max-width: 900px) {padding-top: .5rem;}`;
+
 const StyledSkills = styled.div`
 	display: flex;
 	width: 100vw;
@@ -65,25 +69,25 @@ const IndexPage = () => {
 							listTitle="Features: "
 						>
 							<ListItem>
-								<ListIcon color="green">
+								<ListIcon small color="green">
 									<FaCheck />
 								</ListIcon>
 								<p>Track Issues</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon color="green">
+								<ListIcon small color="green">
 									<FaCheck />
 								</ListIcon>
 								<p>Plan Projects</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon color="green">
+								<ListIcon small color="green">
 									<FaCheck />
 								</ListIcon>
 								<p>Organize Teams</p>
 							</ListItem>
 							<ListItem>
-								<ListIcon color="green">
+								<ListIcon small color="green">
 									<FaCheck />
 								</ListIcon>
 								<p>Responsive</p>
@@ -95,82 +99,101 @@ const IndexPage = () => {
 								<ListIcon color="blue">
 									<FaReact />
 								</ListIcon>
-								<p>React</p>
+								<StyledP>React</StyledP>
 							</ListItem>
 							<ListItem>
 								<ListIcon color="red">
 									<DiRedis />
 								</ListIcon>
-								<p>Redis</p>
+								<StyledP>Redis</StyledP>
 							</ListItem>
 							<ListItem>
 								<ListIcon color="pink">
 									<FaSass />
 								</ListIcon>
-								<p>Sass</p>
+								<StyledP>Sass</StyledP>
 							</ListItem>
 							<ListItem>
 								<ListIcon color="green">
 									<DiMongodb />
 								</ListIcon>
-								<p>MongoDB</p>
+								<StyledP>MongoDB</StyledP>
 							</ListItem>
 							<ListItem>
 								<ListIcon>
 									<DiNginx />
 								</ListIcon>
-								<p>Nginx</p>
+								<StyledP>Nginx</StyledP>
 							</ListItem>
 							<ListItem>
-								<ListIcon>
-									<DiNginx />
+								<ListIcon color="blue">
+									<Icon icon={reduxIcon} />
 								</ListIcon>
-								<p>Redux</p>
+								<StyledP>Redux</StyledP>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="green">
+									<DiNodejs />
+								</ListIcon>
+								<StyledP>Nodejs</StyledP>
 							</ListItem>
 						</ListContainer>
 					</StyledLists>
 					<Button>Go To Axon</Button>
 				</Project>
 			</Section>
+
 			<Section>
 				<SectionTitle color="rgba(255, 99, 234, 0.65)">My Skills</SectionTitle>
 				<StyledSkills>
-					<ListContainer center style="grid" listTitle="Technologies: ">
+					<ListContainer center gridStyle="auto" style="grid" listTitle="Technologies: ">
 						<ListItem>
 							<ListIcon color="blue">
 								<FaReact />
 							</ListIcon>
-							<p>React</p>
+							<StyledP>React</StyledP>
 						</ListItem>
 						<ListItem>
 							<ListIcon color="red">
 								<DiRedis />
 							</ListIcon>
-							<p>Redis</p>
+							<StyledP>Redis</StyledP>
 						</ListItem>
 						<ListItem>
 							<ListIcon color="pink">
 								<FaSass />
 							</ListIcon>
-							<p>Sass</p>
+							<StyledP>Sass</StyledP>
 						</ListItem>
 						<ListItem>
 							<ListIcon color="green">
 								<DiMongodb />
 							</ListIcon>
-							<p>MongoDB</p>
+							<StyledP>MongoDB</StyledP>
 						</ListItem>
 						<ListItem>
-							<ListIcon>
-								<DiNginx />
+							<ListIcon color="blue">
+								<DiDocker />
 							</ListIcon>
-							<p>Nginx</p>
+							<StyledP>Docker</StyledP>
 						</ListItem>
 						<ListItem>
-							<ListIcon>
-								<DiNginx />
+							<ListIcon color="blue">
+								<Icon icon={reduxIcon} />
 							</ListIcon>
-							<p>Redux</p>
+							<StyledP>Redux</StyledP>
+						</ListItem>
+						<ListItem>
+							<ListIcon color="green">
+								<DiNodejs />
+							</ListIcon>
+							<StyledP>NodeJS</StyledP>
+						</ListItem>
+						<ListItem>
+							<ListIcon color="brown">
+								<DiJava />
+							</ListIcon>
+							<StyledP>Java</StyledP>
 						</ListItem>
 					</ListContainer>
 				</StyledSkills>
