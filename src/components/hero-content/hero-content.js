@@ -44,7 +44,14 @@ const slideFromBottom = keyframes`
 const Wrapper = styled.div`
 	position: relative;
 
-	@media only screen and (max-width: 576px) {
+	@media only screen and (max-width: 500px) {
+		right: 9rem;
+		width: 130%;
+		padding-left: 1.7rem;
+		height: 20rem;
+	}
+
+	@media only screen and (max-width: 576px) and (min-width: 501px) {
 		right: 7rem;
 		width: 110%;
 		padding-left: 1.7rem;
