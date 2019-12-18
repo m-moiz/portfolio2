@@ -43,7 +43,7 @@ const ProjectContent = () => (
 		<SectionTitle>Projects</SectionTitle>
 		<Project>
 			<ProjectTitle title="Axon" desc="An Issue Tracker for Teams" />
-			<video width="1368" height="500" controls>
+			<video controls autoPlay>
 				<source />
 			</video>
 

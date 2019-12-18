@@ -1,7 +1,7 @@
 ---
 path: "/post-two"
 date: "2019-10-30"
-title: "My-Second-Post"
+title: "My Second Post"
 author: "Yolo"
 ---
 
