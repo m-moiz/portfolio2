@@ -10,7 +10,7 @@ const StyledForm = styled.form`
 	align-items: center;
 
 	input {
-		width: 30%;
+		width: 35vw;
 		height: 2rem;
 		border: none !important;
 		border-bottom: 1px solid black !important;
@@ -23,9 +23,19 @@ const StyledForm = styled.form`
 	}
 
 	textarea {
-		width: 30%;
+		width: 35vw;
 		height: 8rem;
 		margin-bottom: 2rem;
+	}
+
+	@media only screen and (max-width: 900px) {
+		input {
+			width: 50vw;
+		}
+
+		textarea {
+			width: 50vw;
+		}
 	}
 `;
 

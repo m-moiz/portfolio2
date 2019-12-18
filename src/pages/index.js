@@ -23,17 +23,17 @@ const StyledLists = styled.div`
 	margin-top: 4rem;
 	margin-bottom: 2rem;
 
+	div:nth-child(1) {
+		justify-self: center;
+	}
+
 	@media only screen and (max-width: 517px) {
-		div:nth-child(1) {
-			div {
-				margin-bottom: 1rem;
-			}
+		div {
+			justify-self: center;
 		}
 
-		div:nth-child(2) {
-			div {
-				justify-self: center;
-			}
+		div:nth-child(1) {
+			justify-self: center;
 		}
 	}
 `;
@@ -60,7 +60,10 @@ const IndexPage = () => {
 					</video>
 
 					<StyledLists>
-						<ListContainer containerStyle={{ justifySelf: 'center' }} listTitle="Features: ">
+						<ListContainer
+							containerStyle={{ justifySelf: 'center', marginBottom: '3rem', marginRight: '4rem' }}
+							listTitle="Features: "
+						>
 							<ListItem>
 								<ListIcon color="green">
 									<FaCheck />
