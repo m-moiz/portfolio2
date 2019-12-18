@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Section from '../components/section/section';
-import SectionTitle from '../components/section-title/section-title';
-import ProjectTitle from '../components/project-title/project-title';
-import ListContainer from '../components/list-container/list-container';
-import ListIcon from '../components/list-icon/list-icon';
-import ListItem from '../components/list-item/list-item';
-import Button from '../components/button/button.component';
-import Project from '../components/project/project';
+import Section from '../section/section';
+import SectionTitle from '../section-title/section-title';
+import ProjectTitle from '../project-title/project-title';
+import ListContainer from '../list-container/list-container';
+import ListIcon from '../list-icon/list-icon';
+import ListItem from '../list-item/list-item';
+import Button from '../button/button.component';
+import Project from '../project/project';
 import { FaCheck, FaReact, FaSass } from 'react-icons/fa';
 import { DiRedis, DiNginx, DiMongodb, DiNodejs, DiJava, DiDocker } from 'react-icons/di';
 import { Icon, InlineIcon } from '@iconify/react';

@@ -17,6 +17,8 @@ import ListItem from '../components/list-item/list-item';
 import ContactForm from '../components/contact-form/contact-form';
 import SEO from '../components/seo';
 
+const StyledP = styled.p`@media only screen and (max-width: 900px) {padding-top: .5rem;}`;
+
 const StyledSkills = styled.div`
 	display: flex;
 	width: 100vw;
