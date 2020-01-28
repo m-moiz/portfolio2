@@ -1,12 +1,8 @@
 html {
 	font-size: 90%;
-	font-family: 'Nunito', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-}
-video {
-	width: 100% !important;
-	height: 42rem;
 }
 body {
 	margin: 0;

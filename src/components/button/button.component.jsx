@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 		padding: 1rem;
 		padding-left: ${(props) => (props.size === 'small' ? '2.5rem' : '3rem')};
 		padding-right: ${(props) => (props.size === 'small' ? '2.5rem' : '3rem')};
-		box-shadow: 1px 1px 4px 1px #c7c7c7;
 		transition: color .2s ease-in;
 		transition: background-color .2s ease-in;
 
@@ -41,8 +40,8 @@ const Wrapper = styled.div`
 	margin-bottom: 2rem;
 `;
 
-const Button = ({ handleClick, children, size }) => (
-	<Wrapper size={size}>
+const Button = ({ handleClick, children, size, position, bottom }) => (
+	<Wrapper size={size} style={{ position: position, bottom: bottom }}>
 		<button onClick={handleClick}>{children}</button>
 	</Wrapper>
 );

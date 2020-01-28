@@ -21,83 +21,103 @@ const StyledP = styled.p`@media only screen and (max-width: 900px) {padding-top:
 
 const StyledSkills = styled.div`
 	display: flex;
-	width: 100vw;
+	width: 70vw;
+	background: #3a3939;
+	color: white;
 	margin-top: 4rem;
 	margin-bottom: 4rem;
 	justify-content: center;
+`;
+
+const Wrapper = styled.div`
+	display: flex;
+	flex-direction: column;
 `;
 
 const IndexPage = () => {
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<StyledHeroBackground />
-			<ProjectContent />
-			<Section>
-				<SectionTitle color="rgba(255, 99, 234, 0.65)">My Skills</SectionTitle>
-				<StyledSkills>
-					<ListContainer center gridStyle="auto" style="grid" listTitle="Technologies: ">
-						<ListItem>
-							<ListIcon color="blue">
-								<FaReact />
-							</ListIcon>
-							<StyledP>React</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="red">
-								<DiRedis />
-							</ListIcon>
-							<StyledP>Redis</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="pink">
-								<FaSass />
-							</ListIcon>
-							<StyledP>Sass</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="green">
-								<DiMongodb />
-							</ListIcon>
-							<StyledP>MongoDB</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="blue">
-								<DiDocker />
-							</ListIcon>
-							<StyledP>Docker</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="blue">
-								<Icon icon={reduxIcon} />
-							</ListIcon>
-							<StyledP>Redux</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="green">
-								<DiNodejs />
-							</ListIcon>
-							<StyledP>NodeJS</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="black">
-								<DiGit />
-							</ListIcon>
-							<StyledP>Git</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="brown">
-								<DiJava />
-							</ListIcon>
-							<StyledP>Java</StyledP>
-						</ListItem>
-					</ListContainer>
-				</StyledSkills>
-			</Section>
-			<Section>
-				<SectionTitle color="rgba(51, 126, 255, 0.82)">Contact</SectionTitle>
-				<ContactForm />
-			</Section>
+			<Wrapper>
+				<StyledHeroBackground />
+				<ProjectContent />
+				<Section display="flex" flexDirection="row" justifyContent="center">
+					<StyledSkills>
+						<ListContainer
+							center
+							gridStyle="auto"
+							style="grid"
+							listTitle="Technologies: "
+							containerStyle={{ width: '100%' }}
+							hasPurpleHeader
+						>
+							<ListItem>
+								<ListIcon color="blue">
+									<FaReact />
+								</ListIcon>
+								<StyledP>React</StyledP>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="red">
+									<DiRedis />
+								</ListIcon>
+								<StyledP>Redis</StyledP>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="pink">
+									<FaSass />
+								</ListIcon>
+								<StyledP>Sass</StyledP>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="green">
+									<DiMongodb />
+								</ListIcon>
+								<StyledP>MongoDB</StyledP>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="blue">
+									<DiDocker />
+								</ListIcon>
+								<StyledP>Docker</StyledP>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="blue">
+									<Icon icon={reduxIcon} />
+								</ListIcon>
+								<StyledP>Redux</StyledP>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="green">
+									<DiNodejs />
+								</ListIcon>
+								<StyledP>NodeJS</StyledP>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="black">
+									<DiGit />
+								</ListIcon>
+								<StyledP>Git</StyledP>
+							</ListItem>
+							<ListItem>
+								<ListIcon color="brown">
+									<DiJava />
+								</ListIcon>
+								<StyledP>Java</StyledP>
+							</ListItem>
+						</ListContainer>
+					</StyledSkills>
+				</Section>
+				<Section
+					background="rgb(171, 86, 214)"
+					marginTop="25rem"
+					display="flex"
+					flexDirection="row"
+					justifyContent="center"
+				>
+					<ContactForm />
+				</Section>
+			</Wrapper>
 		</Layout>
 	);
 };

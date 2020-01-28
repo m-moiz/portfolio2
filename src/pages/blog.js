@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import BlogPreview from '../components/blog-preview/blog-preview';
 import Layout from '../components/layout/layout';
+import Header from '../components/header/header';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -20,10 +21,19 @@ const Wrapper = styled.div`
 const StyledH1 = styled.h1`
 	align-self: center;
 	margin-bottom: 3rem;
+
+	@media screen and (max-width: 600px) {
+		font-size: 2.3rem;
+	}
+
+	@media screen and (max-width: 400px) {
+		font-size: 1.7rem;
+	}
 `;
 
 const BlogPage = ({ data }) => (
 	<Layout>
+		<Header />
 		<Container>
 			<Wrapper>
 				<StyledH1>Latest Posts</StyledH1>

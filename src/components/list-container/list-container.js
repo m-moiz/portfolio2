@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
 
 const Container = styled.div`@media only screen and (min-width: 900px) {font-size: 1.5rem;}`;
 const ListTitle = styled.h3`
@@ -8,6 +7,9 @@ const ListTitle = styled.h3`
 	margin-bottom: 2rem;
 	display: ${(props) => (props.center ? 'flex' : 'block')};
 	justify-content: center;
+	height: 60px;
+	align-items: center;
+	background: ${(props) => (props.hasPurpleHeader ? '#b73dce' : '')};
 `;
 
 const StyledUl = styled.ul`
@@ -17,11 +19,11 @@ const StyledUl = styled.ul`
 	grid-auto-flow: dense;
 `;
 
-const ListContainer = ({ containerStyle, gridStyle, children, style, listTitle, center }) => (
-	<Container>
-		<div style={containerStyle}>
-			<ListTitle center={center}>
-				<Fade>{listTitle}</Fade>
+const ListContainer = ({ containerStyle, gridStyle, children, style, listTitle, center, hasPurpleHeader }) => (
+	<Container style={containerStyle}>
+		<div>
+			<ListTitle center={center} hasPurpleHeade={hasPurpleHeader}>
+				{listTitle}
 			</ListTitle>
 			{style === 'grid' ? <StyledUl gridStyle={gridStyle}>{children}</StyledUl> : <ul>{children}</ul>}
 		</div>

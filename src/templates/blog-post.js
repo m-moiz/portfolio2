@@ -12,11 +12,23 @@ const Wrapper = styled.div`
 	width: 768px;
 	display: flex;
 	flex-direction: column;
+
+	@media screen and (max-width: 820px) {
+		width: 85vw;
+	}
 `;
 
 const StyledH1 = styled.h1`
 	font-size: 2.6rem !important;
 	font-weight: 400 !important;
+
+	@media screen and (max-width: 820px) {
+		font-size: 1.9rem !important;
+	}
+
+	@media screen and (max-width: 400px) {
+		font-size: 1.5rem !important;
+	}
 `;
 
 const Template = ({ data }) => {
@@ -26,10 +38,13 @@ const Template = ({ data }) => {
 		<Layout>
 			<Container>
 				<Wrapper>
-					<Link to="/blog">Go Back</Link>
+					<Link to="/blog" style={{ marginBottom: '2rem', marginTop: '1rem' }}>
+						Go Back
+					</Link>
 					<StyledH1>{post.frontmatter.title}</StyledH1>
 					<h4>{post.frontmatter.author}</h4>
 					<h4>{post.frontmatter.date}</h4>
+					<hr />
 					<div dangerouslySetInnerHTML={{ __html: post.html }} />
 				</Wrapper>
 			</Container>

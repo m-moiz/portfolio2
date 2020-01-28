@@ -43,9 +43,6 @@ const ProjectContent = () => (
 		<SectionTitle>Projects</SectionTitle>
 		<Project>
 			<ProjectTitle title="Axon" desc="An Issue Tracker for Teams" />
-			<video controls autoPlay>
-				<source />
-			</video>
 
 			<StyledLists>
 				<ListContainer
@@ -102,12 +99,6 @@ const ProjectContent = () => (
 							<DiMongodb />
 						</ListIcon>
 						<StyledP>MongoDB</StyledP>
-					</ListItem>
-					<ListItem>
-						<ListIcon>
-							<DiNginx />
-						</ListIcon>
-						<StyledP>Nginx</StyledP>
 					</ListItem>
 					<ListItem>
 						<ListIcon color="blue">

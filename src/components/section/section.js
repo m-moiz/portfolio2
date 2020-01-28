@@ -6,6 +6,19 @@ const Wrapper = styled.div`
 	flex-direction: column;
 `;
 
-const Section = ({ children }) => <Wrapper>{children}</Wrapper>;
+const Section = ({ children, background, marginTop, height, display, flexDirection, justifyContent }) => (
+	<Wrapper
+		style={{
+			background: background,
+			marginTop: marginTop,
+			height: height,
+			display: display,
+			flexDirection: flexDirection,
+			justifyContent: justifyContent
+		}}
+	>
+		{children}
+	</Wrapper>
+);
 
 export default Section;

@@ -2,30 +2,63 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '../button/button.component';
 
-const StyledForm = styled.form`
-	margin-top: 3rem;
+const StyledSpan = styled.span`
+	width: 100%;
+	display: flex;
+	font-size: 1.6rem;
+	align-items: center;
+	justify-content: center;
+	background-color: #3e8bbd;
+	height: 60px;
+	color: white;
+`;
+
+const Border = styled.div`
+	width: 100%;
+	height: 5px;
+	background-color: #b137f5;
+`;
+
+const InputWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	padding: 4rem;
+`;
+
+const InputContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+`;
+
+const StyledForm = styled.form`
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	background: #404040;
+	bottom: 12rem;
+
+	input,
+	select {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 100%;
+	}
 
 	label {
 		font-size: 1.2rem;
-		width: 35vw;
+		letter-spacing: .02rem;
+		color: white;
+		width: 100%;
 		margin-bottom: .9rem;
 	}
 
 	input {
 		padding-left: 1.2rem;
-		width: 35vw;
 		height: 2.4rem;
 		border: none !important;
-		border-bottom: 1px solid #b5b5b5 !important;
-		margin-bottom: 2rem;
-
-		:last-child {
-			margin-bottom: 5rem;
-		}
 
 		&:focus {
 			outline: none;
@@ -36,38 +69,54 @@ const StyledForm = styled.form`
 	textarea {
 		padding-top: 1rem;
 		padding-left: 1.2rem;
-		width: 35vw;
+		width: 100%;
 		height: 12rem;
-		margin-bottom: 2rem;
 		border: 1px solid #b5b5b5 !important;
 	}
 
 	@media only screen and (max-width: 900px) {
+		width: 90%;
+
 		input {
-			width: 60vw;
+			width: 100%;
 		}
 
 		textarea {
-			width: 60vw;
+			width: 100%;
 		}
 
 		label {
 			font-size: 1rem;
-			width: 60vw;
+			width: 100%;
 		}
 	}
 `;
 
 const ContactForm = () => (
 	<StyledForm name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-		<input type="hidden" name="form-name" value="contact" />
-		<label>Name</label>
-		<input type="text" name="name" placeholder="Your name" />
-		<label>Email Address</label>
-		<input type="email" name="email" placeholder="Your email" />
-		<label>Message</label>
-		<textarea name="message" placeholder="Your message" />
-		<Button size="small">Submit</Button>
+		<StyledSpan>Contact</StyledSpan>
+		<InputWrapper>
+			<input type="hidden" name="form-name" value="contact" />
+			<label htmlFor="name">Name</label>
+			<InputContainer>
+				<input type="text" name="name" id="name" placeholder="Your name" />
+				<Border />
+			</InputContainer>
+
+			<label htmlFor="email">Email Address</label>
+			<InputContainer>
+				<input type="email" name="email" id="email" placeholder="Your email" />
+				<Border />
+			</InputContainer>
+			<label htmlFor="message">Message</label>
+			<InputContainer>
+				<textarea name="message" id="message" placeholder="Your message" />
+				<Border />
+			</InputContainer>
+		</InputWrapper>
+		<Button position="relative" bottom="3rem" size="small">
+			Submit
+		</Button>
 	</StyledForm>
 );
 

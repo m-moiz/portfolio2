@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Reveal from 'react-reveal/Reveal';
 
 const StyledLi = styled.li`
 	list-style-type: none;
@@ -9,10 +8,6 @@ const StyledLi = styled.li`
 	font-size: inherit;
 `;
 
-const ListItem = ({ children }) => (
-	<StyledLi>
-		<Reveal>{children}</Reveal>
-	</StyledLi>
-);
+const ListItem = ({ children }) => <StyledLi>{children}</StyledLi>;
 
 export default ListItem;
