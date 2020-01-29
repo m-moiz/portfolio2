@@ -70,8 +70,9 @@ const Wrapper = styled.div`
 `;
 
 const MainHeader = styled.h1`
+	@import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap");
 	animation: ${slideFromLeft} .4s ease-in-out 1;
-	font-family: 'Puritan', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 72px;
@@ -89,7 +90,7 @@ const MainHeader = styled.h1`
 
 const Description = styled.h3`
 	animation: ${slideFromRight} .4s ease-in-out 1;
-	font-family: Puritan;
+	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 26px;
