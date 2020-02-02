@@ -6,7 +6,14 @@ const StyledHeader = styled.div`
 	position: relative;
 	display: flex;
 	top: 80%;
-	width: 100%;
+	${(props) => {
+		if (props.notMain) {
+			return `
+			 align-items: center;
+			 height: 50px;
+		   `;
+		}
+	}} width: 100%;
 	font-size: 20px;
 	letter-spacing: 0.005em;
 	justify-content: center;
@@ -29,18 +36,24 @@ const Wrapper = styled.div`
 	margin-right: 3rem;
 `;
 
-const Header = () => (
-	<StyledHeader>
+const Header = ({ notMain }) => (
+	<StyledHeader notMain={notMain}>
 		<div>
-			<Link to="/">Home</Link>
+			<Link to="/" activeStyle={{ borderBottom: '1px solid grey' }}>
+				Home
+			</Link>
 		</div>
 
 		<Wrapper>
-			<Link to="/projects">Projects</Link>
+			<Link to="/projects" activeStyle={{ borderBottom: '1px solid grey' }}>
+				Projects
+			</Link>
 		</Wrapper>
 
 		<div>
-			<Link to="/blog">Blog</Link>
+			<Link to="/blog" activeStyle={{ borderBottom: '1px solid grey' }}>
+				Blog
+			</Link>
 		</div>
 	</StyledHeader>
 );

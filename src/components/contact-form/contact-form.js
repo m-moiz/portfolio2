@@ -23,6 +23,12 @@ const InputWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 4rem;
+
+	@media screen and (max-width: 660px) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 2rem;
+	}
 `;
 
 const InputContainer = styled.div`

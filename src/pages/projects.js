@@ -6,8 +6,8 @@ import ProjectContent from '../components/project-content/project-content';
 
 const ProjectPage = () => (
 	<Layout>
-		<Header />
-		<ProjectContent />
+		<Header notMain />
+		<ProjectContent noTitle />
 	</Layout>
 );
 

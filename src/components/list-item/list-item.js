@@ -6,6 +6,7 @@ const StyledLi = styled.li`
 	display: flex;
 	flex-direction: row;
 	font-size: inherit;
+	justify-self: center;
 `;
 
 const ListItem = ({ children }) => <StyledLi>{children}</StyledLi>;

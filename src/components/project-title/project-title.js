@@ -9,11 +9,11 @@ const Wrapper = styled.div`
 	align-items: center;
 	h3 {
 		margin-top: 40px;
-		font-size: 3rem !important;
+		font-size: 2.5rem !important;
 	}
 
 	h4 {
-		font-size: 2rem !important;
+		font-size: 1.6rem !important;
 	}
 
 	@media only screen and (max-width: 900px) {

@@ -27,6 +27,10 @@ const StyledSkills = styled.div`
 	margin-top: 4rem;
 	margin-bottom: 4rem;
 	justify-content: center;
+
+	@media screen and (max-width: 612px) {
+		width: 90vw;
+	}
 `;
 
 const Wrapper = styled.div`
@@ -45,6 +49,7 @@ const IndexPage = () => {
 					<StyledSkills>
 						<ListContainer
 							center
+							titleHeight="60px"
 							gridStyle="auto"
 							style="grid"
 							listTitle="Technologies: "
@@ -110,7 +115,7 @@ const IndexPage = () => {
 				</Section>
 				<Section
 					background="rgb(171, 86, 214)"
-					marginTop="25rem"
+					marginTop="17rem"
 					display="flex"
 					flexDirection="row"
 					justifyContent="center"

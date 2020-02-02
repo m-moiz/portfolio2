@@ -33,7 +33,7 @@ const StyledH1 = styled.h1`
 
 const BlogPage = ({ data }) => (
 	<Layout>
-		<Header />
+		<Header notMain />
 		<Container>
 			<Wrapper>
 				<StyledH1>Latest Posts</StyledH1>

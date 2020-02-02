@@ -83,27 +83,41 @@ const MainHeader = styled.h1`
 		font-size: 62px;
 	}
 
+	@media screen and (max-width: 668px) {
+		font-size: 58px;
+	}
+
 	@media screen and (max-width: 600px) {
 		font-size: 50px;
+	}
+
+	@media screen and (max-width: 560px) {
+		font-size: 40px;
 	}
 `;
 
 const Description = styled.h3`
-	animation: ${slideFromRight} .4s ease-in-out 1;
-	font-family: 'Montserrat', sans-serif;
+	@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+	font-family: 'Varela Round', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 26px;
 	line-height: 29px;
-	letter-spacing: 0.105em;
+	letter-spacing: 0.05em;
 	opacity: .9;
+	position: relative;
+	margin-top: .5rem;
+	left: 186px;
+	animation: ${slideFromRight} .4s ease-in-out 1;
 
-	@media screen and (max-width: 820px) {
+	@media screen and (max-width: 970px) {
 		font-size: 20px;
+		left: 0;
 	}
 
 	@media screen and (max-width: 600px) {
-		font-size: 18px;
+		font-size: 16px;
+		left: 0;
 	}
 `;
 
@@ -132,12 +146,49 @@ const Polygon1 = styled.div`
 		left: 32%;
 	}
 
-	@media screen and (max-width: 920px) {
+	@media screen and (max-width: 880px) {
+		left: 30%;
+	}
+
+	@media screen and (max-width: 800px) {
 		left: 28%;
 	}
 
-	@media screen and (max-width: 772px) {
+	@media screen and (max-width: 732px) {
 		left: 25%;
+	}
+
+	@media screen and (max-width: 684px) {
+		left: 24%;
+	}
+
+	@media screen and (max-width: 620px) {
+		left: 22%;
+	}
+
+	@media screen and (max-width: 576px) {
+		left: 20%;
+	}
+
+	@media screen and (max-width: 552px) {
+		left: 18%;
+	}
+
+	@media screen and (max-width: 508px) {
+		left: 14%;
+	}
+
+	@media screen and (max-width: 452px) {
+		background: none;
+		left: 10%;
+	}
+
+	@media screen and (max-width: 420px) {
+		left: 7%;
+	}
+
+	@media screen and (max-width: 390px) {
+		left: 3%;
 	}
 `;
 
