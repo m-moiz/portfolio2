@@ -1,7 +1,7 @@
 import React from 'react';
-
 import styled, { keyframes } from 'styled-components';
 import Header from '../header/header';
+import Button from '../button/button.component';
 const slideFromLeft = keyframes`
    from {
 	  opacity: 0;
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
 		position: absolute;
 		width: 1023px;
 		height: 182px;
-		left: 112px;
+		left: 158px;
 		top: 267px;
 	}
 
@@ -201,6 +201,9 @@ const HeroContent = () => (
 		<Wrapper>
 			<MainHeader>Hi, My name is Moiz</MainHeader>
 			<Description>I enjoy building websites and solving problems.</Description>
+			<Button backgroundColor="#212121" position="relative" top="2rem" letterSpacing="0.04rem">
+				My work
+			</Button>
 		</Wrapper>
 	</React.Fragment>
 );

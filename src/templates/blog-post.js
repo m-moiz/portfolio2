@@ -31,6 +31,11 @@ const StyledH1 = styled.h1`
 	}
 `;
 
+const Content = styled.div`
+	@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+	font-family: 'Varela Round', sans-serif;
+`;
+
 const Template = ({ data }) => {
 	const post = data.markdownRemark;
 
@@ -45,7 +50,7 @@ const Template = ({ data }) => {
 					<h4>{post.frontmatter.author}</h4>
 					<h4>{post.frontmatter.date}</h4>
 					<hr />
-					<div dangerouslySetInnerHTML={{ __html: post.html }} />
+					<Content dangerouslySetInnerHTML={{ __html: post.html }} />
 				</Wrapper>
 			</Container>
 		</Layout>

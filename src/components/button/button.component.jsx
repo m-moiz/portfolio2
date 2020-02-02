@@ -7,23 +7,27 @@ const Wrapper = styled.div`
 
 	button {
 		border-radius: 5rem;
-		background-color: #00a4d6;
+		background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : '#00a4d6')};
+		letter-spacing: ${(props) => (props.letterSpacing ? props.letterSpacing : '')};
+		top: ${(props) => (props.top ? props.top : '')};
 		color: white;
 		font-size: ${(props) => (props.size === 'small' ? '1.2rem' : '1.5rem')};
 		border: none !important;
-		padding: 1rem;
-		padding-left: ${(props) => (props.size === 'small' ? '2.5rem' : '3rem')};
-		padding-right: ${(props) => (props.size === 'small' ? '2.5rem' : '3rem')};
+		line-height: 0;
+		padding-top: ${(props) => (props.size === 'small' ? '1.7rem' : '2rem')};
+		padding-bottom: ${(props) => (props.size === 'small' ? '1.7rem' : '2rem')};
+		padding-left: 3rem;
+		padding-right: 3rem;
 		transition: color .2s ease-in;
 		transition: background-color .2s ease-in;
+		position: relative;
 
 		&:hover {
 			curson: pointer;
-			background-color: #eda6ff;
+			background-color: #00c539;
 		}
 
 		&:active {
-			box-shadow: 1px 1px 2px 2px #c7c7c7;
 		}
 
 		&:focus {
@@ -40,8 +44,14 @@ const Wrapper = styled.div`
 	margin-bottom: 2rem;
 `;
 
-const Button = ({ handleClick, children, size, position, bottom }) => (
-	<Wrapper size={size} style={{ position: position, bottom: bottom }}>
+const Button = ({ handleClick, children, size, position, bottom, top, backgroundColor, letterSpacing }) => (
+	<Wrapper
+		size={size}
+		top={top}
+		backgroundColor={backgroundColor}
+		letterSpacing={letterSpacing}
+		style={{ position: position, bottom: bottom }}
+	>
 		<button onClick={handleClick}>{children}</button>
 	</Wrapper>
 );

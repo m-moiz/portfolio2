@@ -38,14 +38,22 @@ const StyledLists = styled.div`
 	}
 `;
 
+const Wrapper = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+`;
+
+const ImgWrapper = styled.div`width: 80%;`;
+
 const StyledP = styled.p`@media only screen and (max-width: 900px) {padding-top: .5rem;}`;
 
 const ProjectContent = ({ noTitle }) => {
 	const data = useStaticQuery(graphql`
 		query MyQuery {
-			file(relativePath: { eq: "img-1.png" }) {
+			file(relativePath: { eq: "img-2.png" }) {
 				childImageSharp {
-					fluid(maxWidth: 1600, maxHeight: 800) {
+					fluid(maxWidth: 1349, maxHeight: 657, quality: 100) {
 						...GatsbyImageSharpFluid_withWebp
 					}
 				}
@@ -57,7 +65,19 @@ const ProjectContent = ({ noTitle }) => {
 			{noTitle ? '' : <SectionTitle>Projects</SectionTitle>}
 			<Project>
 				<ProjectTitle title="Axon" desc="An Issue Tracker for Teams" />
-				<Img fluid={data.file.childImageSharp.fluid} alt="Image of project" />
+				<Wrapper>
+					<ImgWrapper>
+						<Img
+							fluid={data.file.childImageSharp.fluid}
+							alt="Image of project"
+							style={{
+								borderRadius: '6px',
+								boxShadow: '6px 30px 30px rgba(23,43,77,.1)'
+							}}
+						/>
+					</ImgWrapper>
+				</Wrapper>
+
 				<StyledLists>
 					<ListContainer
 						containerStyle={{ justifySelf: 'center', marginBottom: '3rem', marginRight: '4rem' }}
