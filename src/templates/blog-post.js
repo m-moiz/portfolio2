@@ -37,12 +37,12 @@ const Content = styled.div`
 
 	p {
 		color: rgba(0, 0, 0, 0.84);
-		line-height: 1.58;
+		line-height: 1.48;
 	}
 
 	@media screen and (min-width: 900px) {
 		p {
-			font-size: 19px;
+			font-size: 18px;
 		}
 	}
 `;
