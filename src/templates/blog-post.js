@@ -36,7 +36,8 @@ const Content = styled.div`
 	font-family: 'Varela Round', sans-serif;
 
 	p {
-		color: #272727;
+		color: rgba(0, 0, 0, 0.84);
+		line-height: 1.58;
 	}
 
 	@media screen and (min-width: 900px) {
