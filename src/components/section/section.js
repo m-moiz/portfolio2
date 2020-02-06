@@ -6,8 +6,9 @@ const Wrapper = styled.div`
 	flex-direction: column;
 `;
 
-const Section = ({ children, background, marginTop, height, display, flexDirection, justifyContent }) => (
+const Section = ({ children, background, marginTop, height, display, flexDirection, justifyContent, id }) => (
 	<Wrapper
+		id={id}
 		style={{
 			background: background,
 			marginTop: marginTop,

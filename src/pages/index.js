@@ -44,7 +44,7 @@ const IndexPage = () => {
 			<SEO title="Home" />
 			<Wrapper>
 				<StyledHeroBackground />
-				<ProjectContent />
+				<ProjectContent id="projects" />
 				<Section display="flex" flexDirection="row" justifyContent="center">
 					<StyledSkills>
 						<ListContainer
@@ -52,7 +52,7 @@ const IndexPage = () => {
 							titleHeight="60px"
 							gridStyle="auto"
 							style="grid"
-							listTitle="Technologies: "
+							listTitle="My Skills "
 							containerStyle={{ width: '100%' }}
 							hasPurpleHeader
 						>

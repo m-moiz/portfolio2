@@ -94,6 +94,10 @@ const MainHeader = styled.h1`
 	@media screen and (max-width: 560px) {
 		font-size: 40px;
 	}
+
+	@media screen and (max-width: 420px) {
+		font-size: 35px;
+	}
 `;
 
 const Description = styled.h3`
@@ -118,6 +122,13 @@ const Description = styled.h3`
 	@media screen and (max-width: 600px) {
 		font-size: 16px;
 		left: 0;
+		bottom: 2rem;
+	}
+
+	@media screen and (max-width: 420px) {
+		font-size: 14px;
+		left: 0;
+		bottom: 2rem;
 	}
 `;
 
@@ -201,7 +212,14 @@ const HeroContent = () => (
 		<Wrapper>
 			<MainHeader>Hi, My name is Moiz</MainHeader>
 			<Description>I enjoy building websites and solving problems.</Description>
-			<Button backgroundColor="#212121" position="relative" top="2rem" letterSpacing="0.04rem">
+			<Button
+				isATag
+				href="#projects"
+				backgroundColor="#212121"
+				position="relative"
+				top="2rem"
+				letterSpacing="0.04rem"
+			>
 				My work
 			</Button>
 		</Wrapper>

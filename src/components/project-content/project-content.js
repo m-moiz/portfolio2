@@ -48,7 +48,7 @@ const ImgWrapper = styled.div`width: 80%;`;
 
 const StyledP = styled.p`@media only screen and (max-width: 900px) {padding-top: .5rem;}`;
 
-const ProjectContent = ({ noTitle }) => {
+const ProjectContent = ({ noTitle, id }) => {
 	const data = useStaticQuery(graphql`
 		query MyQuery {
 			file(relativePath: { eq: "img-2.png" }) {
@@ -61,7 +61,7 @@ const ProjectContent = ({ noTitle }) => {
 		}
 	`);
 	return (
-		<Section>
+		<Section id={id}>
 			{noTitle ? '' : <SectionTitle>Projects</SectionTitle>}
 			<Project>
 				<ProjectTitle title="Axon" desc="An Issue Tracker for Teams" />
@@ -148,7 +148,9 @@ const ProjectContent = ({ noTitle }) => {
 						</ListItem>
 					</ListContainer>
 				</StyledLists>
-				<Button>Go To Axon</Button>
+				<Button isATag href="https://axon-js.tools" target="_blank" rel="noopener noreferrer">
+					Go To Axon
+				</Button>
 			</Project>
 		</Section>
 	);

@@ -25,8 +25,8 @@ const InputWrapper = styled.div`
 	padding: 4rem;
 
 	@media screen and (max-width: 660px) {
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-left: 1.7rem;
+		padding-right: 1.7rem;
 		padding-top: 2rem;
 	}
 `;
