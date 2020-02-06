@@ -34,6 +34,16 @@ const StyledH1 = styled.h1`
 const Content = styled.div`
 	@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
 	font-family: 'Varela Round', sans-serif;
+
+	p {
+		color: #272727;
+	}
+
+	@media screen and (max-width: 900px) {
+		p {
+			font-size: 21px;
+		}
+	}
 `;
 
 const Template = ({ data }) => {
