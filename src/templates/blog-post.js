@@ -32,16 +32,27 @@ const StyledH1 = styled.h1`
 `;
 
 const Content = styled.div`
-	@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
-	font-family: 'Varela Round', sans-serif;
+	@import url("https://fonts.googleapis.com/css?family=Raleway:500&display=swap");
+	font-family: 'Raleway', sans-serif;
 
 	p {
-		color: rgba(0, 0, 0, 0.84);
-		line-height: 1.48;
+		color: #252525;
+		word-spacing: 2px;
+		line-height: 1.67;
+	}
+
+	pre {
+		color: #252525;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	@media screen and (min-width: 900px) {
 		p {
+			font-size: 18px;
+		}
+
+		pre {
 			font-size: 18px;
 		}
 	}

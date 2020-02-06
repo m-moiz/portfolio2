@@ -1,8 +1,7 @@
 ---
 path: "/post-two"
 date: "2019-10-30"
-title: "My Second Post"
-author: "Yolo"
+title: "Using library components with formik"
+author: "Muhammad Moiz"
 ---
 
-This is my second blog post in Gatsby
