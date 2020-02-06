@@ -39,9 +39,9 @@ const Content = styled.div`
 		color: #272727;
 	}
 
-	@media screen and (max-width: 900px) {
+	@media screen and (min-width: 900px) {
 		p {
-			font-size: 21px;
+			font-size: 19px;
 		}
 	}
 `;
