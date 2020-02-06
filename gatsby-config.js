@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
 	siteMetadata: {
-		title: `Gatsby Default Starter`,
+		title: `Muhammad Moiz`,
 		description: `Portfolio site for author Muhammad Moiz.`,
 		author: `@muhammadmoiz`
 	},
