@@ -7,13 +7,16 @@ const Wrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
 	h3 {
 		margin-top: 40px;
-		font-size: 2.5rem !important;
+		font-size: 2.2rem !important;
+		color: #1b1b1b;
 	}
 
 	h4 {
-		font-size: 1.6rem !important;
+		font-size: 1.3rem !important;
+		color: #4a4a4a;
 	}
 
 	@media only screen and (max-width: 900px) {

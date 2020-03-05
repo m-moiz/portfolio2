@@ -8,8 +8,11 @@ const Container = styled.div`
 	justify-content: center;
 `;
 
-const Wrapper = styled.div`
-	width: 768px;
+const Wrapper = styled.article`
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 52rem;
+	padding: 1.625rem 1.21875rem;
 	display: flex;
 	flex-direction: column;
 
@@ -19,8 +22,12 @@ const Wrapper = styled.div`
 `;
 
 const StyledH1 = styled.h1`
+	@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+	font-family: 'Muli', sans-serif;
 	font-size: 2.6rem !important;
+	letter-spacing: -0.07rem;
 	font-weight: 400 !important;
+	color: #2d2d2d;
 
 	@media screen and (max-width: 820px) {
 		font-size: 1.9rem !important;
@@ -31,29 +38,39 @@ const StyledH1 = styled.h1`
 	}
 `;
 
-const Content = styled.div`
-	@import url("https://fonts.googleapis.com/css?family=Raleway:500&display=swap");
-	font-family: 'Raleway', sans-serif;
+const Content = styled.section`
+	@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+	font-family: 'Lato', sans-serif;
+
+	a {
+		color: #ff00ff;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 
 	p {
-		color: #252525;
-		word-spacing: 2px;
-		line-height: 1.67;
+		color: hsl(0, 0%, 0%, 0.8);
+		word-spacing: 1px;
+		letter-spacing: 0.01rem;
+		line-height: 1.7;
+		margin-bottom: 1.4rem;
 	}
 
 	pre {
-		color: #252525;
+		background: #2d2d2d;
 		margin-top: 2rem;
 		margin-bottom: 2rem;
 	}
 
 	@media screen and (min-width: 900px) {
 		p {
-			font-size: 18px;
+			font-size: 16.5px;
 		}
 
 		pre {
-			font-size: 18px;
+			font-size: 14px;
 		}
 	}
 `;

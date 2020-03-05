@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 html {
 	font-size: 90%;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }

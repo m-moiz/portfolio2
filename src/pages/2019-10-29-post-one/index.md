@@ -5,7 +5,7 @@ title: "How to query nested subdocument arrays in MongoDB"
 author: "Muhammad Moiz"
 ---
 
-While I was working on my project, I came across a problem that took me innumerable hours to solve. The problem involved in performing crud operations on multi-level nested documents in MongoDb.
+While I was working on my project, I came across a problem that took me innumerable hours to solve. The problem involved in performing crud operations on multi-level nested documents in [MongoDb](https://www.mongodb.com/).
 (A document has an array of documents and each item in the array has an array of documents)
 
 Well, that might have sound confusing but lets imagine a real scenario where we might want to create a blog application. We could imagine a user having a bunch of posts and each of those posts having a bunch of comments. Our data would look something like this: 

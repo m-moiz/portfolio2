@@ -9,7 +9,7 @@ Before solving complex problems, we should try to solve simpler problems and as 
 
 How do data structures help us in solving problems you ask? 
 
-We need 
+
 
 
 

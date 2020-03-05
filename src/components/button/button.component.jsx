@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 		letter-spacing: ${(props) => (props.letterSpacing ? props.letterSpacing : '')};
 		top: ${(props) => (props.top ? props.top : '')};
 		color: white;
-		font-size: ${(props) => (props.size === 'small' ? '1.2rem' : '1.5rem')};
+		font-size: ${(props) => (props.size === 'small' ? '1.2rem' : '1.2rem')};
 		border: none !important;
 		line-height: 0;
 		padding-top: ${(props) => (props.size === 'small' ? '1.7rem' : '2rem')};
@@ -41,16 +41,17 @@ const Wrapper = styled.div`
 		letter-spacing: ${(props) => (props.letterSpacing ? props.letterSpacing : '')};
 		top: ${(props) => (props.top ? props.top : '')};
 		color: white;
-		font-size: ${(props) => (props.size === 'small' ? '1.2rem' : '1.5rem')};
-		border: none !important;
+		font-size: ${(props) => (props.size === 'small' ? '1.2rem' : '1.2rem')};
 		line-height: 0;
-		padding-top: ${(props) => (props.size === 'small' ? '1.7rem' : '2rem')};
-		padding-bottom: ${(props) => (props.size === 'small' ? '1.7rem' : '2rem')};
-		padding-left: 3rem;
-		padding-right: 3rem;
+		padding-top: ${(props) => (props.size === 'small' ? '1.7rem' : '1.6rem')};
+		padding-bottom: ${(props) => (props.size === 'small' ? '1.7rem' : '1.6rem')};
+		padding-left: 2.4rem;
+		padding-right: 2.4rem;
 		transition: color .2s ease-in;
 		transition: background-color .2s ease-in;
 		position: relative;
+		border-left: 7px solid #d303ff;
+		border-right: 7px solid #d303ff;
 
 		&:hover {
 			curson: pointer;

@@ -82,6 +82,7 @@ const ProjectContent = ({ noTitle, id }) => {
 					<ListContainer
 						containerStyle={{ justifySelf: 'center', marginBottom: '3rem', marginRight: '4rem' }}
 						listTitle="Features: "
+						hasLightColor
 					>
 						<ListItem>
 							<ListIcon small color="green">
@@ -109,7 +110,7 @@ const ProjectContent = ({ noTitle, id }) => {
 						</ListItem>
 					</ListContainer>
 
-					<ListContainer gridStyle="auto" style="grid" listTitle="Built Using: ">
+					<ListContainer gridStyle="auto" style="grid" listTitle="Built Using: " hasLightColor>
 						<ListItem>
 							<ListIcon color="blue">
 								<FaReact />

@@ -50,12 +50,12 @@ const Wrapper = styled.div`
 		top: 267px;
 	}
 
+	letter-spacing: -0.15rem;
 	font-family: 'Mako', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 70px;
 	line-height: 126px;
-	letter-spacing: 0.005em;
 	display: flex;
 	flex-direction: column;
 	color: black;
@@ -75,9 +75,17 @@ const MainHeader = styled.h1`
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 72px;
+	font-size: 64px;
 	line-height: 80px;
 	opacity: 1;
+
+	.purple {
+		color: #a900ff;
+	}
+
+	.white {
+		color: white;
+	}
 
 	@media screen and (max-width: 820px) {
 		font-size: 62px;
@@ -105,14 +113,19 @@ const Description = styled.h3`
 	font-family: 'Varela Round', sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 26px;
+	font-size: 22px;
 	line-height: 29px;
-	letter-spacing: 0.05em;
+	letter-spacing: -0.05rem;
+	word-spacing: 0.2rem;
 	opacity: .9;
 	position: relative;
 	margin-top: .5rem;
-	left: 186px;
+	left: 216px;
 	animation: ${slideFromRight} .4s ease-in-out 1;
+
+	.pink {
+		color: #ff5c98;
+	}
 
 	@media screen and (max-width: 970px) {
 		font-size: 20px;
@@ -218,7 +231,7 @@ const HeroContent = () => (
 				backgroundColor="#212121"
 				position="relative"
 				top="2rem"
-				letterSpacing="0.04rem"
+				letterSpacing="-0.03rem"
 			>
 				My work
 			</Button>
