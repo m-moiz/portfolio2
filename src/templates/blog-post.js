@@ -40,7 +40,7 @@ const StyledH1 = styled.h1`
 
 const Content = styled.section`
 	@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato', serif;
 
 	a {
 		color: #ff00ff;
