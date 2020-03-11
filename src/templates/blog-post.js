@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout/layout';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
+
 const Container = styled.div`
 	width: 100vw;
 	display: flex;
@@ -83,7 +86,7 @@ const Template = ({ data }) => {
 			<Container>
 				<Wrapper>
 					<Link to="/blog" style={{ marginBottom: '2rem', marginTop: '1rem' }}>
-						Go Back
+						<FontAwesomeIcon icon={faArrowLeft} />
 					</Link>
 					<StyledH1>{post.frontmatter.title}</StyledH1>
 					<h4>{post.frontmatter.author}</h4>

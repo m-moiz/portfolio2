@@ -232,6 +232,7 @@ const HeroContent = () => (
 				position="relative"
 				top="2rem"
 				letterSpacing="-0.03rem"
+				hasBorder
 			>
 				My work
 			</Button>

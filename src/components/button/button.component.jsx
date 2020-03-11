@@ -6,7 +6,7 @@ const Wrapper = styled.div`
 	justify-content: center;
 
 	button {
-		border-radius: 5rem;
+		border-radius: 3rem;
 		background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : '#00a4d6')};
 		letter-spacing: ${(props) => (props.letterSpacing ? props.letterSpacing : '')};
 		top: ${(props) => (props.top ? props.top : '')};
@@ -36,7 +36,7 @@ const Wrapper = styled.div`
 	}
 
 	a {
-		border-radius: 5rem;
+		border-radius: 3rem;
 		background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : '#00a4d6')};
 		letter-spacing: ${(props) => (props.letterSpacing ? props.letterSpacing : '')};
 		top: ${(props) => (props.top ? props.top : '')};
@@ -50,8 +50,8 @@ const Wrapper = styled.div`
 		transition: color .2s ease-in;
 		transition: background-color .2s ease-in;
 		position: relative;
-		border-left: 7px solid #d303ff;
-		border-right: 7px solid #d303ff;
+		border-left: ${(props) => (props.hasBorder ? '7px solid #d303ff' : '')};
+		border-right: ${(props) => (props.hasBorder ? '7px solid #d303ff' : '')};
 
 		&:hover {
 			curson: pointer;
@@ -84,6 +84,7 @@ const Button = ({
 	children,
 	size,
 	position,
+	hasBorder,
 	bottom,
 	top,
 	backgroundColor,
@@ -93,6 +94,7 @@ const Button = ({
 		size={size}
 		top={top}
 		backgroundColor={backgroundColor}
+		hasBorder={hasBorder}
 		letterSpacing={letterSpacing}
 		style={{ position: position, bottom: bottom }}
 	>

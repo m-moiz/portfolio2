@@ -41,6 +41,7 @@ const BlogPage = ({ data }) => (
 					<BlogPreview
 						key={post.node.id}
 						title={post.node.frontmatter.title}
+						imageUrl={post.node.frontmatter.imageUrl}
 						author={post.node.frontmatter.author}
 						date={post.node.frontmatter.date}
 						path={post.node.frontmatter.path}
@@ -60,6 +61,7 @@ export const pageQuery = graphql`
 					frontmatter {
 						path
 						title
+						imageUrl
 						date
 						author
 					}

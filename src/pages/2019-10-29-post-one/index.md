@@ -2,15 +2,16 @@
 path: "/post-one"
 date: "2019/10/29"
 title: "How to query nested subdocument arrays in MongoDB"
+imageUrl: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1442&q=80"
 author: "Muhammad Moiz"
 ---
 
-While I was working on my project, I came across a problem that took me innumerable hours to solve. The problem involved in performing crud operations on multi-level nested documents in [MongoDb](https://www.mongodb.com/).
-(A document has an array of documents and each item in the array has an array of documents)
+While I was working on one of my projects, I came across a problem that took me quite some time to solve. I was having trouble performing crud operations on multi-level nested documents in [MongoDb](https://www.mongodb.com
+(A document has an array of documents and each item in the array has an array of documents).
 
-Well, that might have sound confusing but lets imagine a real scenario where we might want to create a blog application. We could imagine a user having a bunch of posts and each of those posts having a bunch of comments. Our data would look something like this: 
+There is an important scalability issue with the solution I am about to show you. Since document sizes are capped at 16MB in MongoDB, the proposed solution doesn't scale when you have numerous subdocuments.
 
-*Side Note: There is a much better way of modeling many to many relationships in mongo, I will go over it in part 2 of this post.*
+We could imagine a user having a bunch of posts and each of those posts having a bunch of comments. Our data would look something like this: 
 
 ```javascript
  {
@@ -24,13 +25,13 @@ Well, that might have sound confusing but lets imagine a real scenario where we 
               {
                 id: 1,
                 comment: "Awww",
-                byUser: '13'
+                byUser: 'user13'
               }
 
               {
                 id: 2,
                 comment: 'Amazing',
-                byUser: '28'
+                byUser: 'user28'
 
               }
            ]
@@ -40,8 +41,39 @@ Well, that might have sound confusing but lets imagine a real scenario where we 
  }
 ```
 
-Given a schema like this, lets go through each of the CRUD operations. We will go over blog and then comments in each phase.
+Important: Look above at the json. This is just one use document, if we have a lot of blog posts and comments we will reach the 16MB limit for this document. In this scenario, it is quite unlikely that a user will have 1000's of blog posts or comments, however if we designed our database schema for a particular topic like cats and our document looked like this:
 
+```javascript
+ {
+    topicId: 1,
+    topicName: 'Cats',
+    posts: [
+        { 
+           id: 1,
+           title: 'Cats are awesome',
+           byUser: 'user1',
+           comments: [
+              {
+                id: 1,
+                comment: "Awww",
+                byUser: 'user13'
+              }
+
+              {
+                id: 2,
+                comment: 'Amazing',
+                byUser: 'user28'
+
+              }
+           ]
+        }
+    ]
+
+ }
+```
+We can easily imagine that a particular topic can have 1000's of posts by different users. This means we will have numerous subdocuments of posts inside the topic document above thus the document will easily exceed the 16MB limit and our solution won't work. This is a thing to keep in mind when you are designing your database schema.
+
+Given the first schema for the user having a bunch of posts, lets go through each of the CRUD operations. We will go over blog and then comments in each phase.
 
 ### Create
 
@@ -209,7 +241,7 @@ User.findOneAndUpdate(
 This should make sense if you understand the positional operator and the previous explanations.
 Use `{new: true}` to return the updated document in findOneAndUpdate otherwise it will return the previous document.
 
-As I mentioned earlier, multi-level nested documents are not the best way to model many to many relationships as they create really complex queries, return unwanted fields and affect performance.
+As I mentioned earlier, if you have numerous subdocuments, our proposed solution will exceed the 16MB document limit of MongoDB.
 
-In part 2 I'll go through referencing documents instead of nesting them.
+In order to circumvent this limitation, I'll go through referencing documents instead of nesting them in part 2.
 

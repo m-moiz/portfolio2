@@ -16,9 +16,10 @@ const Wrapper = styled.div`
 	}
 `;
 
-const BlogPreview = ({ key, title, author, date, path }) => (
+const BlogPreview = ({ key, title, author, imageUrl, date, path }) => (
 	<Wrapper key={key}>
 		<h3>{title}</h3>
+		<img src={imageUrl} alt="blog preview" />
 		<small>
 			Posted by {author} on {date}
 		</small>

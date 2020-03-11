@@ -2,6 +2,7 @@
 path: "/post-three"
 date: "2020-02-15"
 title: "Basic Data Structures in Javascript"
+imageUrl: "https://images.unsplash.com/photo-1532009877282-3340270e0529?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
 author: "Muhammad Moiz"
 ---
 
