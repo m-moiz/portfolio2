@@ -54,10 +54,9 @@ const Content = styled.section`
 	}
 
 	p {
-		color: hsl(0, 0%, 0%, 0.8);
-		word-spacing: 1px;
-		letter-spacing: 0.01rem;
-		line-height: 1.7;
+		color: hsl(0, 0%, 0%, 1);
+		word-spacing: .6px;
+		line-height: 1.65;
 		margin-bottom: 1.4rem;
 	}
 
@@ -69,7 +68,7 @@ const Content = styled.section`
 
 	@media screen and (min-width: 900px) {
 		p {
-			font-size: 16.5px;
+			font-size: 19px;
 		}
 
 		pre {
