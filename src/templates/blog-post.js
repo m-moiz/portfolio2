@@ -42,8 +42,8 @@ const StyledH1 = styled.h1`
 `;
 
 const Content = styled.section`
-	@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-	font-family: 'Lato', serif;
+	@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+	font-family: 'Crimson Text', serif;
 
 	a {
 		color: #ff00ff;
