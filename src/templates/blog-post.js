@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import Header from '../components/header/header';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -82,6 +83,7 @@ const Template = ({ data }) => {
 
 	return (
 		<Layout>
+			<Header />
 			<Container>
 				<Wrapper>
 					<Link to="/blog" style={{ marginBottom: '2rem', marginTop: '1rem' }}>

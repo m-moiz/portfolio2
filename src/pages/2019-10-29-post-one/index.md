@@ -1,5 +1,5 @@
 ---
-path: "/post-one"
+path: "/how-to-query-nested-subdocument-arrays-in-MongoDB"
 date: "2019/10/29"
 title: "How to query nested subdocument arrays in MongoDB"
 imageUrl: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1442&q=80"
