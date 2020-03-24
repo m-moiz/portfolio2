@@ -15,13 +15,13 @@ Pre-requisites
 
 You don't need to know everything stated above but you should have some basic html, css and programming familiarity.
 
-### The parallels between functions in React and Javascript 
+# The parallels between functions in React and Javascript 
 
 When I was learning react, I was really scared of the terms: __state__ and __props__ and how frequently they were thrown around. I thought that __state__ had something to do with state space in mathematics but in react: __state__ is quite simple.
 
 __State__ is where you put your variables in react. More precisely, it is an object in which you put your variables. Whenever you create a function in javascript, you create your local variables inside the function and then you do something with those variables. In react, you use the local variables(state) and use them inside your html(jsx)
 
-# Javascript
+### Javascript
 
 ```javascript
 
@@ -32,7 +32,7 @@ function doSomething() {
 
 ```
 
-# React
+### React
 
 ```javascript
 
@@ -84,7 +84,7 @@ class DoSomething extends Component {
 
 How do change the state object? In a normal function in javascript, we can change our variables by reassigning them. The component class we are extending from provides a __setState__ method to change our state.
 
-# Javascript
+### Javascript
 
 ```javascript
 
@@ -95,7 +95,7 @@ function doSomething() {
 
 ```
 
-# React
+### React
 
 ```javascript
 
