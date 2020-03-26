@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Header from '../header/header';
-import Button from '../button/button.component';
+import AtagButton from '../a-tag-button/a-tag-button.component';
+
 const slideFromLeft = keyframes`
    from {
 	  opacity: 0;
@@ -42,41 +43,31 @@ const slideFromBottom = keyframes`
 `;
 
 const Wrapper = styled.div`
-	@media screen and (min-width: 960px) {
-		position: absolute;
-		width: 1023px;
-		height: 182px;
-		left: 158px;
-		top: 267px;
-	}
-
-	letter-spacing: -0.15rem;
+@import url("https://fonts.googleapis.com/css2?family=Mako&display=swap");
+	letter-spacing: 0.05rem;
 	font-family: 'Mako', sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 70px;
+	font-size: 52px;
 	line-height: 126px;
 	display: flex;
 	flex-direction: column;
-	color: black;
+	width: 100vw;
+	height: 768px;
+	justify-content: center;
+	align-items: center;
+	color: white;
 
-	animation: ${slideFromBottom} .2s ease-in-out 1;
-
-	@media screen and (max-width: 960px) {
-		width: 100vw;
-		justify-content: center;
-		align-items: center;
-	}
+	animation: ${slideFromBottom} .2s ease-in-out 1;	
 `;
 
 const MainHeader = styled.h1`
-	@import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=Mako&display=swap");
 	animation: ${slideFromLeft} .4s ease-in-out 1;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Mako', sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 64px;
-	line-height: 80px;
+	font-size: 52px;
 	opacity: 1;
 
 	.purple {
@@ -113,12 +104,11 @@ const Description = styled.h3`
 	font-family: 'Varela Round', sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 22px;
+	font-size: 24px;
 	line-height: 29px;
-	letter-spacing: -0.05rem;
+	letter-spacing: 0.05rem;
 	word-spacing: 0.2rem;
 	opacity: .9;
-	position: relative;
 	margin-top: .5rem;
 	left: 216px;
 	animation: ${slideFromRight} .4s ease-in-out 1;
@@ -225,17 +215,7 @@ const HeroContent = () => (
 		<Wrapper>
 			<MainHeader>Hi, My name is Moiz</MainHeader>
 			<Description>I enjoy building websites and solving problems.</Description>
-			<Button
-				isATag
-				href="#projects"
-				backgroundColor="#212121"
-				position="relative"
-				top="2rem"
-				letterSpacing="-0.03rem"
-				hasBorder
-			>
-				My work
-			</Button>
+			<AtagButton href="#projects"/>
 		</Wrapper>
 	</React.Fragment>
 );

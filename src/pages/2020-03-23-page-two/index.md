@@ -15,7 +15,7 @@ Pre-requisites
 
 You don't need to know everything stated above but you should have some basic html, css and programming familiarity.
 
-# The parallels between functions in React and Javascript 
+## The parallels between functions in React and Javascript 
 
 When I was learning react, I was really scared of the terms: __state__ and __props__ and how frequently they were thrown around. I thought that __state__ had something to do with state space in mathematics but in react: __state__ is quite simple.
 

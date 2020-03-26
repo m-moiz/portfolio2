@@ -31,12 +31,12 @@ const BackgroundSection = ({ className }) => (
 
 const StyledHeroBackground = styled(BackgroundSection)`
 position: absolute;
-height: 768px;
+height: 700px;
 background-size: cover !important;
 left: 0px;
 top: 0px;
   &:before {
-	  filter: brightness(0.5);
+	  filter: brightness(0.65);
 	  opacity: 1 !important;
   }
 `;

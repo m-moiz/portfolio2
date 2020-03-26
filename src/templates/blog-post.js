@@ -92,7 +92,6 @@ const Template = ({ data }) => {
 					<StyledH1>{post.frontmatter.title}</StyledH1>
 					<h4>{post.frontmatter.author}</h4>
 					<h4>{post.frontmatter.date}</h4>
-					<hr />
 					<Content dangerouslySetInnerHTML={{ __html: post.html }} />
 				</Wrapper>
 			</Container>
