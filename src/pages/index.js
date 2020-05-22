@@ -113,13 +113,7 @@ const IndexPage = () => {
 						</ListContainer>
 					</StyledSkills>
 				</Section>
-				<Section
-					background="rgb(171, 86, 214)"
-					marginTop="17rem"
-					display="flex"
-					flexDirection="row"
-					justifyContent="center"
-				>
+				<Section background="rgb(171, 86, 214)" display="flex" flexDirection="row" justifyContent="center">
 					<ContactForm />
 				</Section>
 			</Wrapper>

@@ -1,8 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/layout/layout';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Header from '../components/header/header';
 import styled from 'styled-components';
 
@@ -15,6 +12,7 @@ const Container = styled.div`
 const Wrapper = styled.article`
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 5rem;
 	max-width: 52rem;
 	padding: 1.625rem 1.21875rem;
 	display: flex;
@@ -43,8 +41,16 @@ const StyledH1 = styled.h1`
 `;
 
 const Content = styled.section`
-	@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
-	font-family: 'Crimson Text', serif;
+	@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+	font-family: 'Varela Round', sans-serif;
+
+	h2 {
+		color: #1a1a1a;
+	}
+
+	h3 {
+		color: #1a1a1a;
+	}
 
 	a {
 		color: #ff00ff;
@@ -55,25 +61,75 @@ const Content = styled.section`
 	}
 
 	p {
-		color: hsl(0, 0%, 0%, 1);
+		font-size: 14px;
+		color: hsl(0, 0%, 35%);
 		word-spacing: .6px;
 		line-height: 1.65;
+		margin-top: 1.4rem;
 		margin-bottom: 1.4rem;
 	}
 
+	ul {
+		color: hsl(0, 0%, 35%);
+		font-size: 14px;
+	}
+
+	ol {
+		color: hsl(0, 0%, 35%);
+		font-size: 14px;
+	}
+
 	pre {
+		font-size: 14px;
 		background: #2d2d2d;
 		margin-top: 2rem;
 		margin-bottom: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0px 0px 1px 3px #3c3c3c;
+		padding: 1.5rem;
+
+		code {
+			background: none;
+		}
+	}
+
+	blockquote {
+		position: relative;
+		overflow: hidden;
+		margin: 2rem 0;
+		padding: 1em 1.2em;
+		font-size: 14px;
+		border-left: 4px solid #12ff90;
+		background: #fffefe;
+		box-shadow: 0px 0px 1px 2px #d7d6d6;
+	}
+
+	code {
+		padding: 0 .3em;
+		line-height: 1.5em;
+		background: #f1f2f3;
+		border-radius: 5px;
 	}
 
 	@media screen and (min-width: 900px) {
 		p {
-			font-size: 19px;
+			font-size: 18px;
+		}
+
+		blockquote {
+			font-size: 18px;
 		}
 
 		pre {
-			font-size: 14px;
+			font-size: 18px;
+		}
+
+		ol {
+			font-size: 18px;
+		}
+
+		ul {
+			font-size: 18px;
 		}
 	}
 `;
@@ -86,12 +142,7 @@ const Template = ({ data }) => {
 			<Header />
 			<Container>
 				<Wrapper>
-					<Link to="/blog" style={{ marginBottom: '2rem', marginTop: '1rem' }}>
-						<FontAwesomeIcon icon={faArrowLeft} />
-					</Link>
 					<StyledH1>{post.frontmatter.title}</StyledH1>
-					<h4>{post.frontmatter.author}</h4>
-					<h4>{post.frontmatter.date}</h4>
 					<Content dangerouslySetInnerHTML={{ __html: post.html }} />
 				</Wrapper>
 			</Container>

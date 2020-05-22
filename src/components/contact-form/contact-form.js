@@ -1,28 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../button/button.component';
-
-const StyledSpan = styled.span`
-	width: 100%;
-	display: flex;
-	font-size: 1.6rem;
-	align-items: center;
-	justify-content: center;
-	background-color: #3e8bbd;
-	height: 60px;
-	color: white;
-`;
-
-const Border = styled.div`
-	width: 100%;
-	height: 5px;
-	background-color: #b137f5;
-`;
 
 const InputWrapper = styled.div`
 	display: flex;
-	flex-direction: column;
 	padding: 4rem;
+	height: 600px;
+	justify-content: center;
+	width: 100%;
 
 	@media screen and (max-width: 660px) {
 		padding-left: 1.7rem;
@@ -31,19 +15,19 @@ const InputWrapper = styled.div`
 	}
 `;
 
+const FormWrapper = styled.div`width: 500px;`;
+
 const InputContainer = styled.div`
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	margin-bottom: 2rem;
 `;
 
 const StyledForm = styled.form`
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: 60%;
-	background: #404040;
-	bottom: 12rem;
+	background: rgb(43, 43, 43);
+	background: linear-gradient(180deg, rgb(43, 43, 43) 0%, rgb(0, 0, 0) 100%);
+	width: 100%;
 
 	input,
 	select {
@@ -54,17 +38,22 @@ const StyledForm = styled.form`
 	}
 
 	label {
-		font-size: 1.2rem;
-		letter-spacing: .02rem;
-		color: white;
+		font-size: 1rem;
 		width: 100%;
-		margin-bottom: .9rem;
+		letter-spacing: 0.02rem;
+		color: white;
 	}
 
 	input {
-		padding-left: 1.2rem;
-		height: 2.4rem;
-		border: none !important;
+		width: 195%;
+		padding-left: .7rem;
+		background-color: transparent;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 1px solid white;
+		align-self: center;
+		color: white;
 
 		&:focus {
 			outline: none;
@@ -74,55 +63,60 @@ const StyledForm = styled.form`
 
 	textarea {
 		padding-top: 1rem;
-		padding-left: 1.2rem;
-		width: 100%;
+		padding-left: .7rem;
+		margin-top: 1.2rem;
+		width: 195%;
 		height: 12rem;
+		margin-top: 1rem;
 		border: 1px solid #b5b5b5 !important;
 	}
+`;
 
-	@media only screen and (max-width: 900px) {
-		width: 90%;
+const SubmitButton = styled.button`
+	width: 100%;
+	padding: .6rem;
+	background: #000;
+	border: 1px solid #0da8ff;
+	color: white;
+	border-radius: .5rem;
+	margin-top: 1.5rem;
+	transition: background .35s ease-in, border .35s ease-in;
 
-		input {
-			width: 100%;
-		}
-
-		textarea {
-			width: 100%;
-		}
-
-		label {
-			font-size: 1rem;
-			width: 100%;
-		}
+	&:hover {
+		background: #3835ff;
+		border: 1px solid #69ff79;
+		cursor: pointer;
 	}
+`;
+
+const StyledH3 = styled.div`
+	text-align: center;
+	margin-top: 2.5rem;
+	font-size: 1.4rem;
+	color: white;
 `;
 
 const ContactForm = () => (
 	<StyledForm name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-		<StyledSpan>Contact</StyledSpan>
+		<StyledH3>Contact</StyledH3>
 		<InputWrapper>
-			<input type="hidden" name="form-name" value="contact" />
-			<label htmlFor="name">Name</label>
-			<InputContainer>
-				<input type="text" name="name" id="name" placeholder="Your name" />
-				<Border />
-			</InputContainer>
-
-			<label htmlFor="email">Email Address</label>
-			<InputContainer>
-				<input type="email" name="email" id="email" placeholder="Your email" />
-				<Border />
-			</InputContainer>
-			<label htmlFor="message">Message</label>
-			<InputContainer>
-				<textarea name="message" id="message" placeholder="Your message" />
-				<Border />
-			</InputContainer>
+			<FormWrapper>
+				<input type="hidden" name="form-name" value="contact" />
+				<InputContainer>
+					<label htmlFor="name">Name</label>
+					<input type="text" name="name" id="name" />
+				</InputContainer>
+				<InputContainer>
+					<label htmlFor="email">Email</label>
+					<input type="email" name="email" id="email" />
+				</InputContainer>
+				<InputContainer>
+					<label htmlFor="message">Message</label>
+					<textarea name="message" id="message" />
+				</InputContainer>
+				<SubmitButton>Submit</SubmitButton>
+			</FormWrapper>
 		</InputWrapper>
-		<Button position="relative" bottom="3rem" size="small">
-			Submit
-		</Button>
 	</StyledForm>
 );
 

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Section from '../section/section';
 import SectionTitle from '../section-title/section-title';
 import ProjectTitle from '../project-title/project-title';
@@ -8,10 +7,6 @@ import ListIcon from '../list-icon/list-icon';
 import ListItem from '../list-item/list-item';
 import Button from '../button/button.component';
 import Project from '../project/project';
-import { FaCheck, FaReact, FaSass } from 'react-icons/fa';
-import { DiRedis, DiMongodb, DiNodejs } from 'react-icons/di';
-import { Icon } from '@iconify/react';
-import reduxIcon from '@iconify/icons-logos/redux';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -42,113 +37,49 @@ const Wrapper = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	margin-bottom: 4rem;
 `;
 
-const ImgWrapper = styled.div`width: 80%;`;
+const ImgWrapper = styled.div`width: 50%;`;
 
 const StyledP = styled.p`@media only screen and (max-width: 900px) {padding-top: .5rem;}`;
 
 const ProjectContent = ({ noTitle, id }) => {
-	const data = useStaticQuery(graphql`
+	const image = useStaticQuery(graphql`
 		query MyQuery {
-			file(relativePath: { eq: "img-2.png" }) {
+			file1: file(relativePath: { eq: "img-2.png" }) {
 				childImageSharp {
-					fluid(maxWidth: 1349, maxHeight: 657, quality: 100) {
+					fluid(maxWidth: 1349, maxHeight: 735, quality: 100) {
+						...GatsbyImageSharpFluid_withWebp
+					}
+				}
+			}
+			file2: file(relativePath: { eq: "img-1.png" }) {
+				childImageSharp {
+					fluid(maxWidth: 1349, maxHeight: 735, quality: 100) {
 						...GatsbyImageSharpFluid_withWebp
 					}
 				}
 			}
 		}
 	`);
+
 	return (
-		<Section id={id}>
-			{noTitle ? '' : <SectionTitle>Projects</SectionTitle>}
+		<Section id={id} background="#313131">
 			<Project>
 				<ProjectTitle title="Axon" desc="An Issue Tracker for Teams" />
 				<Wrapper>
 					<ImgWrapper>
-						<Img
-							fluid={data.file.childImageSharp.fluid}
-							alt="Image of project"
-							style={{
-								borderRadius: '6px',
-								boxShadow: '6px 30px 30px rgba(23,43,77,.1)'
-							}}
-						/>
+						<Img fluid={image.file1.childImageSharp.fluid} alt="Image of project" />
 					</ImgWrapper>
 				</Wrapper>
 
-				<StyledLists>
-					<ListContainer
-						containerStyle={{ justifySelf: 'center', marginBottom: '3rem', marginRight: '4rem' }}
-						listTitle="Features: "
-						hasLightColor
-					>
-						<ListItem>
-							<ListIcon small color="green">
-								<FaCheck />
-							</ListIcon>
-							<p>Track Issues</p>
-						</ListItem>
-						<ListItem>
-							<ListIcon small color="green">
-								<FaCheck />
-							</ListIcon>
-							<p>Plan Projects</p>
-						</ListItem>
-						<ListItem>
-							<ListIcon small color="green">
-								<FaCheck />
-							</ListIcon>
-							<p>Organize Teams</p>
-						</ListItem>
-						<ListItem>
-							<ListIcon small color="green">
-								<FaCheck />
-							</ListIcon>
-							<p>Responsive</p>
-						</ListItem>
-					</ListContainer>
+				<Wrapper>
+					<ImgWrapper>
+						<Img fluid={image.file2.childImageSharp.fluid} alt="Image of project" />
+					</ImgWrapper>
+				</Wrapper>
 
-					<ListContainer gridStyle="auto" style="grid" listTitle="Built Using: " hasLightColor>
-						<ListItem>
-							<ListIcon color="blue">
-								<FaReact />
-							</ListIcon>
-							<StyledP>React</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="red">
-								<DiRedis />
-							</ListIcon>
-							<StyledP>Redis</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="pink">
-								<FaSass />
-							</ListIcon>
-							<StyledP>Sass</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="green">
-								<DiMongodb />
-							</ListIcon>
-							<StyledP>MongoDB</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="blue">
-								<Icon icon={reduxIcon} />
-							</ListIcon>
-							<StyledP>Redux</StyledP>
-						</ListItem>
-						<ListItem>
-							<ListIcon color="green">
-								<DiNodejs />
-							</ListIcon>
-							<StyledP>Nodejs</StyledP>
-						</ListItem>
-					</ListContainer>
-				</StyledLists>
 				<Button isATag href="https://axon-js.tools" target="_blank" rel="noopener noreferrer">
 					Go To Axon
 				</Button>

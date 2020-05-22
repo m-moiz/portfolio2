@@ -5,22 +5,15 @@ import { Link } from 'gatsby';
 const StyledHeader = styled.div`
 	position: relative;
 	display: flex;
-	top: 80%;
-	${(props) => {
-		if (props.notMain) {
-			return `
-			 align-items: center;
-			 height: 50px;
-		   `;
-		}
-	}} width: 100%;
-	font-size: 20px;
+	font-size: 22px;
+	left: 30%;
 	letter-spacing: 0.005em;
 	justify-content: center;
 
 	a {
-		font-size: 1rem;
-		color: black !important;
+		margin-top: .5rem;
+		font-size: .75rem;
+		color: white !important;
 		&:hover {
 			color: grey !important;
 		}
@@ -36,26 +29,36 @@ const Wrapper = styled.div`
 	margin-right: 3rem;
 `;
 
-const Header = ({ notMain }) => (
-	<StyledHeader notMain={notMain}>
-		<div>
-			<Link to="/" activeStyle={{ borderBottom: '1px solid grey' }}>
-				Home
-			</Link>
-		</div>
+const Polygon = styled.div`
+	z-index: 100;
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	background: black;
+`;
 
-		<Wrapper>
-			<Link to="/projects" activeStyle={{ borderBottom: '1px solid grey' }}>
-				Projects
-			</Link>
-		</Wrapper>
+const Header = () => (
+	<Polygon>
+		<StyledHeader>
+			<div>
+				<Link to="/" activeStyle={{ borderBottom: '1px solid grey' }}>
+					Home
+				</Link>
+			</div>
 
-		<div>
-			<Link to="/blog" activeStyle={{ borderBottom: '1px solid grey' }}>
-				Blog
-			</Link>
-		</div>
-	</StyledHeader>
+			<Wrapper>
+				<Link to="/projects" activeStyle={{ borderBottom: '1px solid grey' }}>
+					Projects
+				</Link>
+			</Wrapper>
+
+			<div>
+				<Link to="/blog" activeStyle={{ borderBottom: '1px solid grey' }}>
+					Blog
+				</Link>
+			</div>
+		</StyledHeader>
+	</Polygon>
 );
 
 export default Header;

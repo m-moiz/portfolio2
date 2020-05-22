@@ -3,29 +3,32 @@ import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
+	@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+	font-family: 'Varela Round', sans-serif;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: 60px;
+	margin-bottom: 40px;
 
 	h3 {
-		margin-top: 40px;
-		font-size: 2.2rem !important;
-		color: #1b1b1b;
+		font-size: 2rem !important;
+		color: white;
 	}
 
 	h4 {
-		font-size: 1.3rem !important;
-		color: #4a4a4a;
+		font-size: 1rem !important;
+		color: #bdbdbd;
 	}
 
 	@media only screen and (max-width: 900px) {
 		h3 {
-			font-size: 2rem !important;
+			font-size: 1.5rem !important;
 		}
 
 		h4 {
-			font-size: 1rem !important;
+			font-size: .75rem !important;
 		}
 	}
 `;

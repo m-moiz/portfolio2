@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 		position: relative;
 
 		&:hover {
-			curson: pointer;
+			cursor: pointer;
 			background-color: #00c539;
 		}
 
@@ -36,12 +36,12 @@ const Wrapper = styled.div`
 	}
 
 	a {
-		border-radius: 3rem;
-		background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : '#00a4d6')};
+		background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : ' #000000')};
 		letter-spacing: ${(props) => (props.letterSpacing ? props.letterSpacing : '')};
+		border: 3px solid #0785fd;
 		top: ${(props) => (props.top ? props.top : '')};
 		color: white;
-		font-size: ${(props) => (props.size === 'small' ? '1.2rem' : '1.2rem')};
+		font-size: ${(props) => (props.size === 'small' ? '1.2rem' : '1rem')};
 		line-height: 0;
 		padding-top: ${(props) => (props.size === 'small' ? '1.7rem' : '1.6rem')};
 		padding-bottom: ${(props) => (props.size === 'small' ? '1.7rem' : '1.6rem')};
@@ -54,8 +54,8 @@ const Wrapper = styled.div`
 		border-right: ${(props) => (props.hasBorder ? '7px solid #d303ff' : '')};
 
 		&:hover {
-			curson: pointer;
-			background-color: #00c539;
+			background-color: #00c338;
+			border: 3px solid #81ff76;
 		}
 
 		&:active {

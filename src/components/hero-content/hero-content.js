@@ -43,7 +43,7 @@ const slideFromBottom = keyframes`
 `;
 
 const Wrapper = styled.div`
-@import url("https://fonts.googleapis.com/css2?family=Mako&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=Mako&display=swap");
 	letter-spacing: 0.05rem;
 	font-family: 'Mako', sans-serif;
 	font-style: normal;
@@ -58,7 +58,7 @@ const Wrapper = styled.div`
 	align-items: center;
 	color: white;
 
-	animation: ${slideFromBottom} .2s ease-in-out 1;	
+	animation: ${slideFromBottom} .2s ease-in-out 1;
 `;
 
 const MainHeader = styled.h1`
@@ -135,87 +135,13 @@ const Description = styled.h3`
 	}
 `;
 
-const Polygon1 = styled.div`
-	position: absolute;
-	width: 340px;
-	height: 220px;
-	left: 70%;
-	top: -160px;
-	background: #ffffff;
-	border-radius: 64px;
-
-	@media screen and (max-width: 1280px) {
-		left: 67%;
-	}
-
-	@media screen and (max-width: 1176px) {
-		left: 64%;
-	}
-
-	@media screen and (max-width: 1080px) {
-		left: 60%;
-	}
-
-	@media screen and (max-width: 968px) {
-		left: 32%;
-	}
-
-	@media screen and (max-width: 880px) {
-		left: 30%;
-	}
-
-	@media screen and (max-width: 800px) {
-		left: 28%;
-	}
-
-	@media screen and (max-width: 732px) {
-		left: 25%;
-	}
-
-	@media screen and (max-width: 684px) {
-		left: 24%;
-	}
-
-	@media screen and (max-width: 620px) {
-		left: 22%;
-	}
-
-	@media screen and (max-width: 576px) {
-		left: 20%;
-	}
-
-	@media screen and (max-width: 552px) {
-		left: 18%;
-	}
-
-	@media screen and (max-width: 508px) {
-		left: 14%;
-	}
-
-	@media screen and (max-width: 452px) {
-		background: none;
-		left: 10%;
-	}
-
-	@media screen and (max-width: 420px) {
-		left: 7%;
-	}
-
-	@media screen and (max-width: 390px) {
-		left: 3%;
-	}
-`;
-
 const HeroContent = () => (
 	<React.Fragment>
-		<Polygon1>
-			<Header />
-		</Polygon1>
-
+		<Header />
 		<Wrapper>
-			<MainHeader>Hi, My name is Moiz</MainHeader>
+			<MainHeader>Muhammad Moiz</MainHeader>
 			<Description>I enjoy building websites and solving problems.</Description>
-			<AtagButton href="#projects"/>
+			<AtagButton href="#projects" />
 		</Wrapper>
 	</React.Fragment>
 );

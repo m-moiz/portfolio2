@@ -41,7 +41,7 @@ We could imagine a user having a bunch of posts and each of those posts having a
  }
 ```
 
-Important: Look above at the json. This is just one use document, if we have a lot of blog posts and comments we will reach the 16MB limit for this document. In this scenario, it is quite unlikely that a user will have 1000's of blog posts or comments, however if we designed our database schema for a particular topic like cats and our document looked like this:
+Important: Looking above at the json. This is just one use document, if we have a lot of blog posts and comments we will reach the 16MB limit for this document. In this scenario, it is quite unlikely that a user will have 1000's of blog posts or comments, however if we designed our database schema for a particular topic like cats and our document looked like this:
 
 ```javascript
  {

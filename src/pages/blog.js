@@ -6,13 +6,13 @@ import Header from '../components/header/header';
 import styled from 'styled-components';
 
 const Container = styled.div`
-	margin-top: 1rem;
 	display: flex;
 	width: 100vw;
 	justify-content: center;
 `;
 
 const Wrapper = styled.div`
+	margin-top: 5rem;
 	width: 768px;
 	display: flex;
 	flex-direction: column;
