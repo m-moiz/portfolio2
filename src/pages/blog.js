@@ -4,6 +4,7 @@ import BlogPreview from '../components/blog-preview/blog-preview';
 import Layout from '../components/layout/layout';
 import Header from '../components/header/header';
 import styled from 'styled-components';
+import SEO from '../components/seo';
 
 const Container = styled.div`
 	display: flex;
@@ -33,6 +34,7 @@ const StyledH1 = styled.h1`
 
 const BlogPage = ({ data }) => (
 	<Layout>
+		<SEO title="Blog" />
 		<Header notMain />
 		<Container>
 			<Wrapper>

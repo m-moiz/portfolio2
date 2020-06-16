@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
-	@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
 	font-family: 'Varela Round', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -35,10 +33,8 @@ const Wrapper = styled.div`
 
 const ProjectTitle = ({ title, desc }) => (
 	<Wrapper>
-		<Fade>
-			<h3>{title}</h3>
-			<h4>{desc}</h4>
-		</Fade>
+		<h3>{title}</h3>
+		<h4>{desc}</h4>
 	</Wrapper>
 );
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/layout';
 import Header from '../components/header/header';
+import SEO from '../components/seo';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -24,7 +25,6 @@ const Wrapper = styled.article`
 `;
 
 const StyledH1 = styled.h1`
-	@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 	font-family: 'Muli', sans-serif;
 	font-size: 2.6rem !important;
 	letter-spacing: -0.07rem;
@@ -41,7 +41,6 @@ const StyledH1 = styled.h1`
 `;
 
 const Content = styled.section`
-	@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 	font-family: 'Varela Round', sans-serif;
 
 	h2 {
@@ -139,6 +138,7 @@ const Template = ({ data }) => {
 
 	return (
 		<Layout>
+			<SEO title={post.frontmatter.title} />
 			<Header />
 			<Container>
 				<Wrapper>

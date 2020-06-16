@@ -43,7 +43,6 @@ const slideFromBottom = keyframes`
 `;
 
 const Wrapper = styled.div`
-	@import url("https://fonts.googleapis.com/css2?family=Mako&display=swap");
 	letter-spacing: 0.05rem;
 	font-family: 'Mako', sans-serif;
 	font-style: normal;
@@ -62,7 +61,6 @@ const Wrapper = styled.div`
 `;
 
 const MainHeader = styled.h1`
-	@import url("https://fonts.googleapis.com/css2?family=Mako&display=swap");
 	animation: ${slideFromLeft} .4s ease-in-out 1;
 	font-family: 'Mako', sans-serif;
 	font-style: normal;
@@ -100,7 +98,6 @@ const MainHeader = styled.h1`
 `;
 
 const Description = styled.h3`
-	@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
 	font-family: 'Varela Round', sans-serif;
 	font-style: normal;
 	font-weight: normal;

@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
 	siteMetadata: {
 		title: `Muhammad Moiz`,
-		description: `Portfolio site for author Muhammad Moiz.`,
+		description: `Portfolio site for Muhammad Moiz.`,
 		author: `@muhammadmoiz`
 	},
 	plugins: [
@@ -21,8 +21,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
+				name: `Portfolio`,
+				short_name: `portfolio`,
 				start_url: `/`,
 				background_color: `#663399`,
 				theme_color: `#663399`,
@@ -31,6 +31,7 @@ module.exports = {
 				// This path is relative to the root of the site.
 			}
 		},
+		`gatsby-plugin-offline`,
 		'gatsby-plugin-catch-links',
 		{
 			resolve: 'gatsby-source-filesystem',
@@ -73,7 +74,7 @@ module.exports = {
 							// Defaults to false.
 							// If you wish to only show line numbers on certain code blocks,
 							// leave false and use the {numberLines: true} syntax below
-							showLineNumbers: false,
+							showLineNumbers: true,
 							// If setting this to true, the parser won't handle and highlight inline
 							// code used in markdown i.e. single backtick code like `this`.
 							noInlineHighlight: false,
