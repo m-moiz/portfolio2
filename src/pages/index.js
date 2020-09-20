@@ -38,11 +38,6 @@ const IndexPage = () => {
 					<About />
 				</Section>
 				<ProjectContent id="projects" />
-				<Section display="flex" flexDirection="row" justifyContent="center">
-					<StyledSkills>
-						<SkillsList />
-					</StyledSkills>
-				</Section>
 				<Section background="rgb(171, 86, 214)" display="flex" flexDirection="row" justifyContent="center">
 					<ContactForm />
 				</Section>
