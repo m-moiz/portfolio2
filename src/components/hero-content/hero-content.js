@@ -95,6 +95,10 @@ const MainHeader = styled.h1`
 	@media screen and (max-width: 420px) {
 		font-size: 35px;
 	}
+
+	@media screen and (max-width: 395px) {
+		font-size: 32px;
+	}
 `;
 
 const Description = styled.h3`
@@ -127,6 +131,12 @@ const Description = styled.h3`
 
 	@media screen and (max-width: 420px) {
 		font-size: 14px;
+		left: 0;
+		bottom: 2rem;
+	}
+
+	@media screen and (max-width: 390px) {
+		font-size: 12px;
 		left: 0;
 		bottom: 2rem;
 	}
