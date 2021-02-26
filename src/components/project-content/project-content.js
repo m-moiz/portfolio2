@@ -80,7 +80,7 @@ const ProjectContent = ({ noTitle, id }) => {
 					</ImgWrapper>
 				</Wrapper>
 
-				<Button isATag href="https://axon-js.tools" target="_blank" rel="noopener noreferrer">
+				<Button isATag href="https://axon-js.me" target="_blank" rel="noopener noreferrer">
 					Go To Axon
 				</Button>
 			</Project>
